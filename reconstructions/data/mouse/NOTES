@@ -1,0 +1,211 @@
+Reconstructions of mouse striatal projection neurons
+====================================================
+
+* original/ - original experimental data from the group of Javier
+  de Felipe Oroquieta, Laboratorio Cajal de Circuitos Corticales Centro de
+  Tecnologia Biomedica, Universidad Politecnica de Madrid.
+
+  Mouse reconstructions C57_* are obtained from 6 month old mice;
+  reconstructions animal_* and mouse_* come from 2-3 month old mice.
+
+* derived/ - processed data.
+
+  Data related to 6 month old mice is in age6m/ subdirectories throughout the
+  directory structure.
+
+* derived/converted/ - reconstructions converted to SWC+ using the HBP Neuron
+  Morphology Viewer (https://neuroinformatics.nl/HBP/morphology-viewer-dev).
+
+* derived/adapted/ - reconstructions adjusted to comply with common SWC format. 
+  Somata contours are replaced with spheres using mean values for the
+  center and radius. Spines are removed, if any. Files are renamed using
+  embedded metadata.
+
+  - C57_ID103_nr20_cel1: soma center -763.1791428571428 35.404
+    -6.1599999999999975, radius 6.51914817180116.
+
+  - C57_ID103_nr20_cel2: soma center 143.56634146341463, -119.5,
+    -10.079999999999998, radius 6.559558346060261.
+
+  - C57_ID103_nr20_cel3: soma center [99.75243902439023,
+    -127.80512195121949, -4.199999999999998], radius 6.306178846314479.
+
+  - C57_ID103_nr21_cel2: soma center [125.2242105263158,
+    -194.1981578947369, -9.519999999999996], radius 6.510874962202161.
+
+  - C57_ID104_nr19_cel1: soma center [115.2534375, -84.595, -7.0],
+    radius 5.792072962572894.
+
+  - C57_ID104_nr19_cel2: soma center [138.4308695652174,
+    -173.9756521739131, -7.560000000000001], radius 6.471752239029725.
+
+  - C57_ID104_nr19_cel3: soma center [92.0957894736842,
+    -120.72368421052632, -6.439999999999999], radius 6.47033395014805.
+
+  - C57_ID104_nr19_cel4: soma center [126.2736, -118.57899999999997,
+    -9.240000000000006], radius 6.450876267225513.
+
+  - C57_ID105_nr14_cel1: soma center [142.5279069767442,
+    -164.07093023255817, -2.799999999999998], radius 5.7827689743511606.
+
+  - C57_ID105_nr14_cel2: soma center [125.13326530612244,
+    -178.12408163265303, -5.879999999999996], radius 6.621364188559756.
+
+  - C57_ID105_nr14_cel4: soma center [99.27590909090908,
+    -127.83818181818182, -9.240000000000002], radius 6.247762290546757.
+
+  - C57_ID106_nr17_cel2: soma center [144.62333333333336,
+    -166.60857142857142, -10.919999999999995], radius 6.401261476645663.
+
+  - C57_ID106_nr17_cel4: soma center [162.71166666666664,
+    -141.94708333333332, -10.639999999999993], radius 6.229996860361507.
+
+  - C57_ID106_nr18_cel1: soma center [91.07296296296298,
+    -111.67518518518519, -9.240000000000004], radius 5.868275690320247.
+
+  - C57_ID106_nr20_cel1: soma center [166.23702702702704,
+    -170.94513513513513, -10.920000000000002], radius 6.257401252022862.
+
+  - animal_1_n18_04102017_cel1: soma center [147.87794186, -187.18504123,
+    -16.64227308], radius 4.741716366459366. Reverted unnecessary
+    shrinkage correction factor 1.1 in z-axis.
+
+  - animal_1_n21_04102017_cel1: soma center [152.89840442, -204.13661483,
+    -8.04942947], radius 6.581261818642577. Reverted unnecessary shrinkage
+    correction factor 1.1 in z-axis.
+
+  - animal_1_n24_04102017_cel1: soma center [180.41916239, -203.76207051,
+    -10.648], radius 5.7489186151900045. Neurite type 'apic' (4) changed
+    to 'dend' (3) for the incomplete dendrite. Negative diameter at the
+    node 2386 is replaced with value from the previous node. Reverted
+    unnecessary shrinkage correction factor 1.1 in z-axis.
+
+  - animal_1_n27_04102017_cel1: soma center [169.02736679, -223.97495908,
+    -27.99197523], radius 6.469369145461804. Reverted unnecessary
+    shrinkage correction factor 1.1 in z-axis.
+
+  - animal_1_n27_04102017_cel2: soma center [165.44138889, -178.74333333,
+    -25.76], radius 6.114758387935538.
+
+  - animal_1_n30_04102017_cel1: soma center [184.6134375, -129.3875,
+    -27.78125], radius 6.801773438902252.
+
+  - animal_1_n30_04102017_cel2: soma center [71.42, -188.58047619,
+    -21.42666667], radius 8.086559179130656.
+
+  - animal_1_n33_04102017_cel1: soma center [170.06428571, -211.94904762,
+    -23.96], radius 6.4444638135577.
+
+  - animal_1_n33_04102017_cel2: soma center [129.61964286, -184.38071429,
+    -11.08], radius 6.477630751769418.
+
+  - animal_5_n15_04102017_cel1: soma center [155.71636364, -206.78136364,
+    -8.73090909], radius 7.809626186387894.
+
+  - animal_5_n18_04102017_cel1: soma center [181.5025, -203.1175, -15.4],
+    radius 5.921891782875647.
+
+  - animal_5_n21_04102017_cel1: soma center [174.62347826, -240.5326087,
+    -16.55652174], radius 6.075506927520211.
+
+  - animal_5_n22_04102017_cel1: soma center [184.54047619, -174.42714286,
+    -14.84], radius 6.259107942387575.
+
+  - animal_5_n22_04102017_cel2: soma center [157.0355814 , -186.52302326,
+    -21.84], radius 6.930909957485447.
+
+  - animal_5_n27_04102017_cel1: soma center [216.99636364, -172.72,
+    -23.52], radius 7.0294530433038185.
+
+  - animal_5_n27_04102017_cel2: soma center [210.8596, -140.9544,
+    -27.3616], radius 7.216736898509376.
+
+* derived/corrected/ - adapted reconstructions centered at origin (0,0,0),
+  corrected for tissue shrinkage and z-jumps, if necessary.
+
+        correct.sh
+
+* derived/sanitized/ - corrected reconstructions without damaged dendritic
+  branches, a pool of intact branches to be used for analysis or repair.
+
+        sanitize.sh
+
+* derived/sliced/ - corrected reconstructions sliced to half along z-axis
+  (by removing dendrites originating above the root), a pool of
+  half-reconstructions to generate predictions for repair.
+
+        slice.sh
+
+* derived/repaired{0,1,2,M}/ - repaired reconstructions using repair mode 0, 1
+  or 2. Manually repaired reconstructions are in repairedM/ directory.
+
+  repaired*/selected/ - reconstructions selected for modeling.
+
+  repaired*/rejected/ - reconstructions rejected at the current repair step
+  (links to cut reconstructions in corrected/ directory).
+
+  Estimate minimal and maximal diameter of the terminal sections in
+  sanitized reconstructions (without outliers, 2 STD).  
+
+      def reject_outliers(d, m=2):
+          data = np.array(d) if not isinstance(d, np.ndarray) else d
+          return data[abs(data - np.median(data)) < m * np.std(data)]
+
+  Run the following commands in repaired0/ directory (same as repaired/):
+
+        OPT=0 DMIN=0.254 DMAX=0.966 repair.sh
+        predict.py ../sliced/*.json
+        mkdir selected rejected
+        for f in `select.sh | grep -v rejected`; do
+              cp */$f.swc selected/
+        done
+        for f in `select.sh | grep rejected | cut -d' ' -f1`; do
+              ln -sf ../../corrected/$f.swc rejected/$f.swc
+        done
+
+  If directory repaired0/rejected/ is not empty, repeat same steps in repaired1/
+  directory:
+
+        OPT=1 DMIN=0.254 DMAX=0.966 repair.sh ../repaired0/rejected
+        <...>
+
+  If directory repaired1/rejected/ is not empty, repeat same steps in repaired2/
+  directory:
+
+        OPT=2 DMIN=0.254 DMAX=0.966 repair.sh ../repaired1/rejected
+        <...>
+
+  If directory repaired2/rejected/ is not empty, repair rejected
+  reconstructions manually and place them into repairedM/selected/ directory.
+
+* derived/postproc/ - final touches to repaired reconstructions. Resampled
+  with fixed spatial resolution 3um and upscaled to recover dendritic
+  length loss due to the resampling. Deleted resampled nodes inside
+  the soma. Optionally corrected for dendrite tortuosity.
+
+        postproc.sh
+
+  Repeat for other repaired?/ directories, if needed.
+
+        postproc.sh ../repaired1/selected
+        postproc.sh ../repaired2/selected
+        postproc.sh ../repairedM/selected
+
+  Additional manual corrections applied (post2 files). Deleted short terminal
+  sections (one segment long).
+
+  - C57_ID103_nr20_cel1-cor-rep73-post - pruned section 836.
+  - C57_ID106_nr17_cel2-cor-rep73-post - pruned section 838.
+  - animal_1_n18_04102017_cel1-cor-rep99-post - pruned section 890.
+  - animal_1_n24_04102017_cel1-cor-rep20-post - pruned section 95.
+  - animal_1_n30_04102017_cel2-cor-rep33-post - pruned sections 115 and 924.
+  - animal_5_n18_04102017_cel1-cor-rep76-post - pruned sections 550, 826 and 827.
+  - animal_5_n22_04102017_cel1-cor-rep31-post - pruned sections 286 and 287.
+  - animal_5_n22_04102017_cel2-cor-rep46-post - pruned section 882.
+  - animal_5_n27_04102017_cel2-cor-rep9-post - pruned section 82.
+
+* derived/release/ - reconstructions ready for simulation, renamed for
+  shorter filenames.
+
+Alexander Kozlov <akozlov@kth.se>
+June 2024

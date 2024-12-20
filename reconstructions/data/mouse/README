@@ -1,0 +1,14 @@
+Reconstructions of mouse striatal projection neurons
+====================================================
+
+* original/ - original experimental data from the group of Javier
+  de Felipe Oroquieta, Laboratorio Cajal de Circuitos Corticales Centro de
+  Tecnologia Biomedica, Universidad Politecnica de Madrid.
+
+  Mouse reconstructions C57_* are obtained from 6 month old mice;
+  reconstructions animal_* and mouse_* come from 2-3 month old mice.
+
+* derived/ - processed data.
+
+  Data related to 6 month old mice is in age6m/ subdirectories throughout the
+  directory structure.

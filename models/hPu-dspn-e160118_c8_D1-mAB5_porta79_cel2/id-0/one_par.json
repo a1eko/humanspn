@@ -1,0 +1,25 @@
+[
+    {
+        "g_pas.axonal": 0.001483882643138723,
+        "g_pas.basal": 1.841445210482309e-05,
+        "g_pas.somatic": 0.00023917060764334344,
+        "gbar_Im.axonal": 0.15911931472975038,
+        "gbar_Im.somatic": 0.007954815294920835,
+        "gbar_bk.basal": 3.75573001540752e-06,
+        "gbar_bk.somatic": 0.00014863662243099862,
+        "gbar_kaf.basal": 0.010253715988062715,
+        "gbar_kaf.somatic": 0.6840081305089184,
+        "gbar_kas.axonal": 0.0028008886330347926,
+        "gbar_kas.basal": 6.719551148602923e-05,
+        "gbar_kas.somatic": 0.002502177434068005,
+        "gbar_kdr.basal": 3.439384190495425e-05,
+        "gbar_kdr.somatic": 0.0006990567132068372,
+        "gbar_kir.basal": 0.0001475559066255889,
+        "gbar_kir.somatic": 0.000929790641680626,
+        "gbar_naf.axonal": 12.073725897419443,
+        "gbar_naf.basal": 0.06203176492089263,
+        "gbar_naf.somatic": 16.670284153093636,
+        "gbar_sk.basal": 7.41115858727893e-06,
+        "gbar_sk.somatic": 0.0001264048866730669
+    }
+]

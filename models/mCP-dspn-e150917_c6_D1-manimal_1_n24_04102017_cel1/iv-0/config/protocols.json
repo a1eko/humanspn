@@ -1,0 +1,98 @@
+{
+    "IV_499": {
+        "stimuli": [
+            {
+                "amp": -0.3151,
+                "delay": 100,
+                "duration": 1000,
+                "totduration": 1400.0
+            },
+            {
+                "amp": 0.0597,
+                "delay": 0.0,
+                "duration": 1400.0,
+                "totduration": 1400.0
+            }
+        ]
+    },
+    "IV_500": {
+        "stimuli": [
+            {
+                "amp": -0.2622,
+                "delay": 100,
+                "duration": 1000,
+                "totduration": 1400.0
+            },
+            {
+                "amp": 0.0597,
+                "delay": 0.0,
+                "duration": 1400.0,
+                "totduration": 1400.0
+            }
+        ]
+    },
+    "IV_502": {
+        "stimuli": [
+            {
+                "amp": -0.1578,
+                "delay": 100,
+                "duration": 1000,
+                "totduration": 1400.0
+            },
+            {
+                "amp": 0.0597,
+                "delay": 0.0,
+                "duration": 1400.0,
+                "totduration": 1400.0
+            }
+        ]
+    },
+    "IV_504": {
+        "stimuli": [
+            {
+                "amp": -0.0525,
+                "delay": 100,
+                "duration": 1000,
+                "totduration": 1400.0
+            },
+            {
+                "amp": 0.0597,
+                "delay": 0.0,
+                "duration": 1400.0,
+                "totduration": 1400.0
+            }
+        ]
+    },
+    "IV_506": {
+        "stimuli": [
+            {
+                "amp": 0.0521,
+                "delay": 100,
+                "duration": 1000,
+                "totduration": 1400.0
+            },
+            {
+                "amp": 0.0597,
+                "delay": 0.0,
+                "duration": 1400.0,
+                "totduration": 1400.0
+            }
+        ]
+    },
+    "IV_508": {
+        "stimuli": [
+            {
+                "amp": 0.1573,
+                "delay": 100,
+                "duration": 1000,
+                "totduration": 1400.0
+            },
+            {
+                "amp": 0.0597,
+                "delay": 0.0,
+                "duration": 1400.0,
+                "totduration": 1400.0
+            }
+        ]
+    }
+}

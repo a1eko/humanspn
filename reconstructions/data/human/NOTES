@@ -1,0 +1,134 @@
+Reconstructions of human striatal projection neurons
+====================================================
+
+* original/ - original experimental data from the group of Javier de
+  Felipe Oroquieta, Laboratorio Cajal de Circuitos Corticales
+  Centro de Tecnologia Biomedica, Universidad Politecnica de Madrid.
+
+* derived/ - processed data.
+
+* derived/converted/ - reconstructions converted to SWC+ using the HBP Neuron
+  Morphology Viewer (https://neuroinformatics.nl/HBP/morphology-viewer-dev).
+
+* derived/adapted/ - reconstructions adjusted to comply with common SWC format. 
+  Somata contours are replaced with spheres using mean values for the
+  center and radius. Spines are removed, if any. Files are renamed using
+  embedded metadata.
+
+  - AB5_porta76_cel1: soma center [-479.6125   -407.864375  -23.17], radius 7.752537378969425
+  - AB5_porta76_cel2: soma center [292.72580645 -372.07645161  -18.24], radius 9.001068288028469
+  - AB5_porta76_cel3: soma center [299.29  -390.107  -17.75], radius 8.345114645918295
+  - AB5_porta76_cel4: soma center [339.0783871  -399.88870968  -20.21], radius 9.124801192228738
+  - AB5_porta76_cel5: soma center [126.16652174 -506.9426087   -21.69], radius 7.879029835223059
+  - AB5_porta76_cel6: soma center [-97.89193548 -681.1483871   -13.8], radius 8.607074999903215
+  - AB5_porta77_cel3: soma center [4.163125 -244.661875  -23.66], radius 7.914722866487832
+  - AB5_porta79_cel1: soma center [-39.62464286 -293.79928571  -11.34], radius 7.56537378157124
+  - AB5_porta79_cel2: soma center [-79.30588235 -644.03        -15.78], radius 9.21912712282146
+  - AB5_porta80A_cel10: soma center [-491.463 -478.583   -8.28], radius 9.413967723911714
+  - AB5_porta80A_cel11: soma center [177.16567568 -590.93459459   -3.48], radius 9.21436083963366
+  - AB5_porta80A_cel12: soma center [-174.13227273 -667.15045455  -26.28], radius 9.735062967432116
+  - AB5_porta80A_cel13: soma center [-351.12285714 -417.01714286  -10.73], radius 9.330661760260726
+  - AB5_porta80A_cel14: soma center [-797.16710526  173.91921053  -18.27], radius 9.47168709780707
+  - AB5_porta80A_cel15: soma center [-69.12153846 -852.09        -15.37], radius 10.419370205633193
+  - AB5_porta80A_cel16: soma center [89.34652174 -601.08043478  -17.98], radius 9.083890329055182
+  - AB5_porta80A_cel17: soma center [-188.5362069  -288.92137931  -10.15], radius 9.051021131005903
+  - AB6_porta25_cel1: soma center [197.27346667 -382.84653333  -25.23], radius 8.252517885401257
+  - AB6_porta25_cel2: soma center [-42.20547619 -391.05190476  -15.37], radius 7.697078954614715
+  - AB6_porta25_cel3: soma center [-74.53414634 -202.56268293  -36.54], radius 7.964195460485271
+  - AB6_porta27_cel1: soma center [-236.13176471 -272.31911765  -20.88], radius 8.701490504458192
+  - AB6_porta31_cel1: soma center [-131.7593617  -439.33659574  -30.16], radius 8.586996869411644
+  - AB6_porta31_cel2: soma center [-271.23333333 -247.87764706  -24.94], radius 8.900585861414559
+  - AB6_porta32_cel1: soma center [176.76657895 -451.94289474  -45.24], radius 8.777892650930594
+  - AB6_porta32_cel2: soma center [231.0064 -402.8168  -30.45], radius 8.301248772771437
+  - AB6_porta32_cel3: soma center [179.28485714 -420.03942857  -42.34], radius 7.47669400824302
+  - AB6_porta32_cel4: soma center [156.81205882 -312.32352941  -17.69], radius 9.252892083274048
+
+* derived/corrected/ - adapted reconstructions centered at origin (0,0,0),
+  corrected for tissue shrinkage and z-jumps, if necessary.
+
+        correct.sh
+
+* derived/sanitized/ - corrected reconstructions without damaged dendritic
+  branches, a pool of intact branches to be used for analysis or repair.
+
+        CUT=10 sanitize.sh
+
+* derived/sliced/ - corrected reconstructions sliced to half along z-axis
+  (just above the root), a pool of half-reconstructions to generate
+  predictions for repair.
+
+        slice.sh
+
+* derived/repaired{0,1,2,M}/ - repaired reconstructions using repair mode 0, 1
+  or 2. Manually repaired reconstructions are in repairedM/ directory.
+
+  repaired*/selected/ - reconstructions selected for modeling.
+
+  repaired*/rejected/ - reconstructions rejected at the current repair step
+  (links to cut reconstructions in corrected/ directory).
+
+  Estimate minimal and maximal diameter of the terminal sections in
+  sanitized reconstructions (without outliers, 2 STD).  
+
+  def reject_outliers(d, m=2):
+      data = np.array(d) if not isinstance(d, np.ndarray) else d
+      return data[abs(data - np.median(data)) < m * np.std(data)]
+
+  Run the following commands in repaired0/ directory (same as repaired/):
+
+        OPT=0 DMIN=0.59 DMAX=1.26 repair.sh
+        predict.py ../sliced/*.json
+        mkdir selected rejected
+        for f in `select.sh | grep -v rejected`; do
+              cp */$f.swc selected/
+        done
+        for f in `select.sh | grep rejected | cut -d' ' -f1`; do
+              ln -sf ../../corrected/$f.swc rejected/$f.swc
+        done
+
+  If directory repaired0/rejected/ is not empty, repeat same steps in repaired1/
+  directory:
+
+        OPT=1 DMIN=0.59 DMAX=1.26 repair.sh ../repaired0/rejected
+        <...>
+
+  If directory repaired1/rejected/ is not empty, repeat same steps in repaired2/
+  directory:
+
+        OPT=2 DMIN=0.59 DMAX=1.26 repair.sh ../repaired1/rejected
+        <...>
+
+  If directory repaired2/rejected/ is not empty, repair rejected
+  reconstructions manually and place them into repairedM/selected/ directory.
+
+* derived/postproc/ - final touches to repaired reconstructions. Resampled
+  with fixed spatial resolution 3um and upscaled to recover dendritic
+  length loss due to the resampling. Deleted resampled nodes inside
+  the soma. Optionally corrected for dendrite tortuosity.
+
+        postproc.sh
+
+  Repeat for other repaired?/ directories, if needed.
+
+        postproc.sh ../repaired1/selected
+        postproc.sh ../repaired2/selected
+        postproc.sh ../repairedM/selected
+
+  Additional manual corrections applied (post2 files). Deleted short terminal
+  sections (one segment long).
+
+  - AB5_porta76_cel1-cor-rep46-post - pruned section 172.
+  - AB5_porta76_cel2-cor-rep93-post - pruned section 497.
+  - AB5_porta76_cel4-cor-rep72-post - deleted 1310, 1750.
+  - AB5_porta80A_cel13-cor-rep42-post - pruned section 482.
+  - AB5_porta80A_cel14-cor-rep82-post - pruned section 1990.
+  - AB5_porta80A_cel15-cor-rep4-post - deleted sections 297, 1213 and misplaced node 295.
+  - AB5_porta80A_cel17-cor-rep44-post - pruned section 1599.
+  - AB6_porta31_cel1-cor-rep9-post - pruned section 518-519.
+  - AB6_porta32_cel2-cor-rep70-post - pruned sections 1371, 1438.
+
+* derived/release/ - reconstructions ready for simulation, renamed for
+  shorter filenames.
+
+Alexander Kozlov <akozlov@kth.se>
+April 2022

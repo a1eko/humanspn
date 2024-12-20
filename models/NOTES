@@ -1,0 +1,1142 @@
+key: - to do, + done, * release, o in progress, x ignore/failed
+
+= Optimization of the striatal projection neuron models for mouse and man
+
+== Test cells
+
++ hput-tst-e150602_c1_D1-mAB5_P_porta76_cel1-1: test cell, initial setup
+
+    x bluepyopt optimization runs well, validation problem: no model
+    passes bap_ca test.
+
+    + ok optimization with upscaled by x1.7 ion channel distribution
+    (human max radius is ~1.66 times bigger).
+
+    x validation: only 1 model out of 10 passes bap_ca test.
+
+    + optimization: increase dend kaf lower bound [0.01, 0.5] ->
+    [0.02, 0.5].
+
+    x validation: 8 passed but ahp is exaggerated.
+
+    + optimization: dend kaf range [0.015, 0.5].
+
+    x validation: 8 passed but ahp is exaggerated.
+
+    + optimization: dend kaf range [0.012, 0.5].
+
+    x validation: 6 passed but ahp is still too big.
+
+    + optimization: dend kaf range [0.011, 0.5].
+
+    + validation: 7 passed, some are good looking, some have large ahp.
+
+    + optimization: dend kaf range [0.011, 0.5], add feature
+    "AHP_depth_abs_slow".
+
+    + validation: 9 passed, all good, bap_ca a bit too small.
+
+    + optimization: revert dend kaf range [0.010, 0.5], with feature
+    "AHP_depth_abs_slow".
+
+    x validation: none validated.
+
+    + optimization: repeat with dend kaf range [0.011, 0.5] and
+    "AHP_depth_abs_slow".
+
+    + validation: 9 pass but dend kaf is suboptimal being at lower
+    bound mostly.
+
++ hput-tst-e150602_c1_D1-mAB5_P_porta76_cel1-2: test cell, improving
+'*-tst-*-1'
+
+    + optimization: try dend kaf range [0.0105, 0.5] and
+    "AHP_depth_abs_slow".
+
+    x validation: none validated.
+
+    + optimization: try dend kaf range [0.0, 0.5], reduce dend naf from
+    [0, 0.1] to [0, 0.05], keep "AHP_depth_abs_slow".
+
+    x validation: 8 passed, bap_ca too small (<0.05, need 0.11).
+
+    + optimization: dend kaf [0.011, 0.5], dend naf [0,0.1] -->
+    [0.01,0.1].
+
+    x validation: none passed, bap_ca too high (>1.1).
+
+    + optimization: dend kaf [0.011, 0.5], dend naf [0.001,0.1].
+
+    x validation: none passed; would have been perfect if dend naf =
+    0.05 (manually).
+
+    + optimization: relax dend kaf [0, 0.5] and dend naf [0, 0.1],
+    finetune naf manually at validation, if needed.
+
+    + validation: 4 passed, good voltage traces, large bap_ca variation
+    in general, 0.10-2.9 (target 0.11+-0.22), meaning dend naf is not
+    constrained and can be any; dend naf can be decreased manually to
+    fit bap_ca but artefacts are possible (bursts, sbuthreshold oscill).
+
+- hput-dspn-e150602_c1_D1-mAB5_P_porta80A_cel10-1
+
+    + optimization: same as *-tst-*-2
+
+x hput-dspn-e150602_c1_D1-mAB5_P_porta80A_cel10-2
+
+    + optimization -- remove features "adaptation_index2" and
+    "inv_first_ISI".
+
+    x validation: none passed, bap_ca too high Z=5-10; f-I slope
+    higher too.
+
+x hput-dspn-e150602_c1_D1-mAB5_P_porta80A_cel10-3
+
+    + optimization -- remove feature "Spikecount" from AP discharge
+    protocols, reduce variance of "mean_frequency" STD/2, reduce dend
+    naf range [0, 0.1] --> [0, 0.05], increase dend Cm by F=1.9.
+
+    x validation: membrane time constant mismatch, need to refit passive
+    properties.
+
+- hput-dspn-e150917_c10_D1-mAB5_P_porta80A_cel16-1
+
+    + optimization: same as cells2 str-dspn-e150917_c10_D1-mWT-P270-20
+    except new morphology and upscaled conductance distribution. Added
+    "AHP_depth_abs_slow", relaxed dend kaf [0, 0.5], keep dend naf
+    [0, 0.05].
+
+    ? validation:
+
+- hput-dspn-e150917_c10_D1-mAB5_P_porta80A_cel16-2
+
+    + optimization -- remove features "adaptation_index2" and
+    "inv_first_ISI".
+
+    + validation: 2 passed, f-I curves are low (mean_frequency is off).
+
+x hput-dspn-e150917_c10_D1-mAB5_P_porta80A_cel16-3
+
+    + optimization -- remove feature "Spikecount" from AP discharge
+    protocols, reduce variance of "mean_frequency" STD/2, do not reduce
+    dend naf range (bap_ca was good), increase dend Cm by F=1.9.
+
+    x validation: membrane time constant mismatch, need to refit passive
+    properties.
+
+- hput-dspn-e150917_c6_D1-mAB5_P_porta76_cel1-1
+
+    + optimize: same as cells2 str-dspn-e150917_c6_D1-m21-6-DE except
+    for new morphology and upscaled x1.7 conductance distribution.
+    Added "AHP_depth_abs_slow", relaxed dend kaf [0, 0.5], keep dend naf
+    [0, 0.02].
+
+    ? validation:
+
+x hput-dspn-e150917_c6_D1-mAB5_P_porta76_cel1-2
+
+    + optimization -- remove features "adaptation_index2" and
+    "inv_first_ISI".
+
+    x validation: none passed, too high f-I slope, bap_ca is very low
+    (passed).
+
+x hput-dspn-e150917_c6_D1-mAB5_P_porta76_cel1-3
+
+    + optimization -- remove feature "Spikecount" from AP discharge
+    protocols, do not reduce variance of "mean_frequency" STD/2 (was
+    done already), increase dend naf range [0, 0.02] --> [0, 0.05],
+    increase dend Cm by F=1.9.
+
+    x validation: membrane time constant mismatch, need to refit passive
+    properties.
+
+- hput-dspn-e150917_c9_D1-mAB5_P_porta80A_cel12-1
+
+    + optimize: same as cells2 str-dspn-e150917_c9_D1-mWT-1215MSN03
+    except for new morphology and upscaled x1.7 conductance distribution.
+    Added "AHP_depth_abs_slow", relaxed dend kaf [0, 0.5], keep dend naf
+    [0, 0.05].
+
+    ? validation:
+
+x hput-dspn-e150917_c9_D1-mAB5_P_porta80A_cel12-2
+
+    + optimization -- remove features "adaptation_index2" and
+    "inv_first_ISI".
+
+    x validation: none passed, bap_ca too high, Z=4.
+
+x hput-dspn-e150917_c9_D1-mAB5_P_porta80A_cel12-3
+
+    + optimization -- remove feature "Spikecount" from AP discharge
+    protocols, do not reduce variance of "mean_frequency" STD/2 (was
+    done already), reduce dend naf range [0, 0.05] --> [0, 0.02],
+    increase dend Cm by F=1.9.
+
+    x validation: membrane time constant mismatch, need to refit passive
+    properties.
+
+
+== Mouse cells
+
+* mCP-dspn-e150917_c6_D1-manimal_1_n24_04102017_cel1: low rheobase cell,
+rheo 335.18
+
+    x iv-0: initial setup, all IV features, parameters from previous
+    mCP cell
+
+    x iv-1: voltage STD from voltage_base of IV protocols
+    0.2704933763822468, time const STD 0.9650158317642025 => fit Z 1.4,
+    e_pas.all from best_models[0] -79.73407281710317 (too close to
+    lower bound).
+
+    + iv-2: extend e_pas range [-90, -70] => fit Z 1.3, e_pas.all from
+    best_models[0] -85.79466631647394.
+
+    + iv-3: same as iv-2, fixed "distance" dist_type => best fit Z 0.939,
+    e_pas -85.37102209963261 from best_models[0].
+
+    x id-1: e_pas from iv-2 -85.79466631647394, other params from
+    previous mCP cell, omit voltage_base and steady_state_voltage*
+    due to voltage drift, skip features relative to threshold, 5% STD
+    time_to_first_spike, 2% STD mean_frequency (800 gen) => exaggerated
+    AHP, sk/bk at lower bounds
+
+    x id-1: e_pas from iv-2 -85.79466631647394, sk/bk lower bound 0.0,
+    STD for mean_frequency and time_to_first_spike 5%, omit absolute
+    volatge measurements due to voltage drift, keep voltage_base with
+    STD from IV and ID protocols (500 gen) => too big AHP still
+
+    x id-2: e_pas from iv-2 -85.79466631647394 +4mV due to voltage
+    drift between IV and ID protocols, keep absolute voltage features,
+    voltage_base for ID only (200 gen) => same bad look
+
+    x id-2: free e_pas [-80, -70], keep absolute voltage features,
+    voltage_base for ID only (800 gen) => fit Z 2.9-3.2, slow AHP bit
+    too strong, e_pas around -80, naf.axonal at upper bound; bap_ca not
+    validated (too strong 1.2!!)
+
+    x id-2: fixed e_pas from iv-2 -85.79466631647394 + 4mV due to voltage
+    drift, keep absolute voltage features, voltage_base for ID only,
+    extend naf.axonal [5, 20], lower naf.basal [0, 0.05] (200 gen) =>
+    naf.axonal bottoms at 5, bap_ca does not decay?!
+
+    + id-2: fixed e_pas from iv-2 -85.79466631647394 + 4mV due to voltage
+    drift, keep absolute voltage features, voltage_base for ID only,
+    extend naf.axonal [0, 20] (500 gen, 11.3h) => fit Z 2.9-3.5, look
+    good; bap_ca does not validate (too high, little decay with distance),
+    without bap_ca only 2 validated (big AHP, high f-I slope).
+
+    x id-3: same as id-2, relax mean_frequency STD 10% => fit Z 3.1-3.4;
+    validated 0 (high f-I slope), none bap_ca (best par: 1,4,5,6, mean:
+    0.7-0.8, z-score: 3.1-3.2)
+
+    x id-3a: same as id-2, relax mean_frequency STD 10%, revert taur_cadyn
+    43 => fit Z 2.4-2.5; validated 0 (f-I slope and AHP), none bap_ca.
+
+    x id-3b: same as id-3, raise lower limit of {bk,sk}.somatic [1e-5,
+    1e-3] => fit Z 3.1-3.4, kind of distorted AHP; validated 0, bap_ca
+    mean 0.8-0.9, z 3.5-3.9.
+
+    x id-3c: same as id-3, raise lower limit of {bk,sk}.somatic [1e-5,
+    1e-3], revert taur_cadyn 43 => fit Z 2.8-3.6, smooth but big AHP;
+    validated 0 (f-I slope, AHP), bap_ca mean 0.8-0.9, z 3.8-3.9.
+
+    + id-3d: same as id-3, decrease mean_frequency STD 1% => fit Z
+    3.9-4.9, slow AHP too big; validated 9, none bap_ca (mean > 1).
+
+    + id-3e: same as id-3, decrease mean_frequency STD 1%, revert
+    taur_cadyn 43 => fit Z 2.7-3.5; validated 2 (f-I slope, AHP), none
+    bap_ca (mean > 1).
+
+    + id-3f: same as id-3, decrease mean_frequency STD 1%, revert
+    taur_cadyn 43, revert AHP_depth_abs_slow, increase low bound kaf.basal
+    [5e-4, 0.1] => fit Z 4.9-6.1, competing errors in mean_frequency and
+    AHP_depth_abs_slow; validated 6 (strong AHP), none bap_ca (only hof
+    2 and 8 show some decay).
+
+    + id-3g: same as id-3, decrease mean_frequency STD 5%, revert
+    taur_cadyn 43, revert AHP_depth_abs_slow, increase low bound kaf.basal
+    [0.005, 0.1] => 4.5-5.0; validated 1-2, f-I slope off (bap_ca mean
+    0.6-0.9 z 2.5-3.7).
+
+    + id-3h: same as id-3g, no limits on kaf.basal => fit Z 3.3-3.8 (does
+    not look any better); validated 3-4 (bap_ca mean 0.8-1.2, z>3.6).
+
+    x * id-3i: same as id-3g, mean_frequency STD 2% => fit Z 3.4-4.5
+    (looks good); validated 0 (3 with thresh 4), bap_ca mean 0.5-0.9 z
+    2.2-3.8 (excellent).
+
+    x id-3j: same as id-3i, max mean_frequency * 0.8 => fit Z > 5,
+    ugly AHP.
+
+    + id-3k: same as id-3i, replace mean_frequency with inv_first_ISI
+    (STD 2%) => fit Z 4.1-4.9, all rates higher than exp; validated 2
+    (high f-I slope), none bap_ca (mean 0.9, z 3.8).
+
+    ? validation -- check feature selection, re-validate all candidates
+
+    ? increase kaf.basal to lower bap_ca
+
+    + id-4: same as id-2, relax mean_frequency STD 10%, e_pas -80 => fit
+    Z 2.9-3.4, AHP tends to oscillate; validated 1, too high f-I slope
+    (none bap_ca).
+
+    x id-4a: same as id-2, relax mean_frequency STD 10%, e_pas -75 =>
+    fit Z 2.9-3.5 (some AHP oscill)
+
+    x id-4b: same as id-2, relax mean_frequency STD 10%, e_pas -70 =>
+    fit Z > 4.8, strong subthreshold oscillations
+
+    x id-4c: same as id-2, relax mean_frequency STD 10%, e_pas -80,
+    revert taur_cadyn 43 => fit Z 2.2-2.7; validated 0 (f-I slope, AHP),
+    none bap_ca, mean > 0.9.
+
+    ? free e_pas, increase STD for mean_frequency 10%, revert taur 43,
+    lower upper bound of sk/bk 1e-4
+
+    + id-5: same as id-2, fixed "distance" dist_type, e_pas
+    -85.37102209963261 + 4mV due to voltage drift (ngen 200) => Z-score
+    mean 3.838, range 3.547-4.221, validated 2 (threshold 3.5, discarded
+    fI slope and ahp_depth). Still too high fI slope, to be replaced
+    with a better model.
+
+    * id-6: same as id-5, updated distance dependence of g_pas and
+    cm to new 6m-age data (ngen 200) => fit Z-score mean 3.589, range
+    3.253-3.752, validated 10 (ignoring 1st_fit_slope, otherwise - 4).
+
+* mCP-dspn-e150917_c6_D1-manimal_5_n27_04102017_cel1, rheo 335.18:
+try previous cell with larger morphology to decrease fI slope
+
+  + iv-0: same as mCP-dspn-e150917_c6_D1-manimal_1_n24_04102017_cel1/iv-3
+  with new morph => best fit Z 0.977 (all good), e_pas -85.86415016488436
+  from bets_models[0].
+
+  * id-0: same as mCP-dspn-e150917_c6_D1-manimal_1_n24_04102017_cel1/id-5,
+  e_pas -85.86415016488436 + 4mV => Z-score mean 4.061, range 3.792-4.232,
+  ahp is too strong, validated 6 (fI slope discarded).
+
+- mCP-dspn-e151123_c4_D1-manimal_5_n27_04102017_cel1, rheo 335.35
+
+- mCP-dspn-e151123_c2_D1-manimal_1_n21_04102017_cel1, rheo 392.54
+
+* ? mCP-dspn-e150602_c1_D1-manimal_1_n33_04102017_cel2, rheo 444.74,
+smaller than median rheobase
+
+    x iv-0: based on iv-2 of mouse 150908_c5, ek -105.9, sigmoidal cm
+    and g_pas, cm 1, Ra 150, shift_kir -20, free g_pas and gbar_kir,
+    generic 10% STD => poor fit voltage_base, high e_pas.
+
+    + iv-1: voltage_base STD 0.16439071006463554 from IV protocols,
+    decay_time_constant STD from IV 0.770216419802469 and
+    2.0454671837993397 => fit Z 0.8, e_pas -66.13030523147758 from
+    best_models[0].
+
+    + iv-2tst: change Fspines from 2 to 2.83 => e_pas -65.7309283293215
+    from best_models[0].
+
+    x id-0: based on id-5 of mouse 150908_c5, generic features,
+    voltage_base STD 0.16439071006463554 from IV protocols, e_pas
+    -66.13030523147758 => many features off.
+
+    x id-1: reduced feature set as in id-5 of mouse 150908_c5 (ngen 500)
+    => bad AP shape: too wide at base.
+
+    x id-1a: add spike_half_width and AHP_time_from_peak (ngen 200) =>
+    big errors in new features.
+
+    * ? id-1b: add spike_half_width STD 10% (ngen 500) => good fit Z
+    1.9-2.1, validated 10, f-I slope is high.
+
+    x id-1c: decrease hi-freq mean_frequency STD 10->5%, increase
+    taur_cadyn 14->17 (ngen 200) => fit Z 1.8(#0)-2.2(#9), worse AHP,
+    g_pas.axonal and kdr.basal topped the range.
+
+    x id-1c: increase g_pas.axonal [1e-5, 5e-2] and kdr.basal [0, 5e-3]
+    (ngen 500) => fit Z 1.9-2.2, still too high freq, Vm prone to oscill,
+    validated 3.
+
+    + ? id-1c: hi-freq mean_frequency STD 5%, taur_cadyn 20 (ngen 200)
+    => fit Z 2.4-3.5, validated 2 (discarded for ap_peak, bap_ca is OK).
+
+    + id-2tst: based on id-1b, e_pas -65.7309283293215 from iv-2tst with
+    Fspines 2.83 (ngen 300) => close to Fspines 2.0.
+
+* mCP-dspn-e160118_c7_D1-manimal_1_n30_04102017_cel1, rheo 447.40
+
+    x iv-0: based on iv-2 of mouse 150908_c5, ek -105.9, sigmoidal cm
+    and g_pas, cm 1, Ra 150, shift_kir -20, free g_pas and gbar_kir,
+    generic 10% STD => voltage_base is off.
+
+    + iv-0: voltage_base STD 0.09759254866820294 and time_const
+    0.6256307927914746 from IV protocol => e_pas -69.97661994327808
+    from best_models[0].
+
+    + iv-1: same as iv-0 with distance dependence => e_pas
+    -79.22576235429206 from best_models[0].
+
+    x id-0: based on id-1b from 150602_c1, e_pas -69.97661994327808 from
+    iv-0, generic features => many features are off.
+
+    x id-1: features and STD from IV protocol, feature selection as
+    in id-1b of 150602_c1, increase g_pas.axonal [1e-5, 0.05], etc =>
+    fit Z 2.0, wrong bap_ca (increasing with distance).
+
+    + id-1: features and STD from IV protocol, feature selection as
+    in id-1b of 150602_c1, increase g_pas.axonal [1e-5, 0.05], ...,
+    kaf.basal [0.01,0.1], naf.basal [0,0.05] (ngen 200) => fit Z 3.3,
+    validated 1 (discarded ap_peak, bap_ca passes).
+
+    + id-1a: same as id-1, peak_voltage STD/=2 (ngen 200) => fit Z 2.8,
+    spike_half_width is fine but err is big, validated 4 (discarded
+    ap_peak).
+
+    + id-1b: same as id-1a, remove spike_half_width (ngen 200) => fit
+    Z 2.4, validated 3 (discarded ap_peak).
+
+    + id-1c: same as id-1a, changed SLURM scripts, 8 nodes (ngen 200)
+    => fit Z 2.065, validated 10.
+
+    x id-1d: same as id-1c, moved to PDC, reduce STD of
+    time_to_first_spike to 1% (ngen 500) => Z-score mean 2.690, range
+    2.602-2.731, time_to_first_spike is good but freq is off.
+
+    x id-1d: same as id-1c, moved to PDC (ngen 200) => Z-score mean 2.050,
+    range 1.916-2.274, validated 9 (bap_ca Z > 2).
+
+    x [was *] id-1d: same as id-1c, moved to PDC, increased kaf.basal
+    [0.02, 0.1] (ngen 200) => Z-score mean 2.515, range 2.239-2.643,
+    validated 6 (ap_peak 4 failurs).
+
+    x id-2: same as id-1d, changed cell_model.py and parameters.json to
+    accept 'distance' dist_type, e_pas -79.22576235429206 from iv-1 =>
+    Z-score mean 2.441, range 2.314-2.511
+
+    + id-2: increase kas.axonal [0, 0.3] (ngen 500) => Z-score mean
+    2.256, range 2.208-2.302, validated 6 (ap_peak 4 failed), bap_ca is
+    too low Z -0.1.
+
+    + [was *] id-2a: decrease kaf.basal [0.0, 0.02] (ngen 500) => Z-score
+    mean 2.582, range 2.475-2.649, validated 10, IV curves slightly off.
+
+    * id-3: same as id-2a, updated distance dependence to 6m-age data
+    => fit Z-score mean 2.546, range 2.409-2.617, validated 9 (ap_peak
+    missed).
+
+* mCP-dspn-e160118_c7_D1-mAB5_porta80A_cel15_scale0.5r0.6p3b1, rheo
+447.40, human morphology with terminal dendrites scaled by 0.5 and all
+diameters by 0.6
+
+  + iv-0: same as iv-0 of
+  mCP-dspn-e160118_c7_D1-manimal_1_n30_04102017_cel1 => fit Z 1.459,
+  e_pas -74.80947018970649
+
+  + id-0: same as id-1d of
+  mCP-dspn-e160118_c7_D1-manimal_1_n30_04102017_cel1, e_pas
+  -74.80947018970649 and kir ranges from iv-0 => Z-score mean 3.492,
+  range 3.109-3.781, validated 10.
+
+  * id-1: same as mCP-dspn-e160118_c7_D1-manimal_1_n30_04102017_cel1/id-3,
+  fixed dist_type=distance, type=range and math.exp, updated distance
+  dependence from age6m data, nseg 500 => fit Z-score mean 2.443, range
+  2.328-2.528, validated 8 (2 omitted due to depblock, 6 accepted with
+  ap_peak and bap_ca Z < 3.5).
+
+* mCP-dspn-e160118_c7_D1-manimal_5_n15_04102017_cel1, rheo 447.40
+
+    + iv-0: based on iv-0 of mouse 160118_c7/animal_1_n30_04102017_cel1 =>
+    e_pas -65.59746423586384 from best_models[0].
+
+    x id-1: based on id-1 of mouse 160118_c7/animal_1_n30_04102017_cel1,
+    e_pas -65.59746423586384 from iv-0, remove spike_half_width (ngen 200)
+    => fit Z 1.9, none validated (ap_peak, but bap_ca is ok).
+
+    x id-1a: same as id-1, remove time_const for IDthresh-sub_586,
+    peak_voltage STD/=2 for IDthresh_598 (ngen 200) => fit Z 1.8, bap_ca
+    too big.
+
+    x id-1b: same as id-1a, increase kaf.basal [0.03,0.1] (ngen 200) =>
+    fit Z 2.0, none validated (due to ap_peak; bap_ca passed).
+
+    * id-1c: same as id-1a, increase kaf.basal [0.03,0.1],
+    naf.{axonal,somatic} [0,10], peak_voltage STD/=2 for IDthresh_598
+    (ngen 200) => fit Z 2.3, validated 8.
+
+- mCP-dspn-e150908_c5_D1-manimal_5_n21_04102017_cel1, rheo 475.42
+
+* mCP-dspn-e150908_c5_D1-manimal_1_n33_04102017_cel1, median cell,
+  rheo 475.42
+
+    x 0iv: generic IV protocols and features, no F_spines factor,
+    default variance 10% of the mean => bad convergence, big errors.
+
+    x 1iv: abs voltage std from IV protocols; std 10% of the mean for
+    the rest (rel voltage deflection and time const) => better voltage
+    fit but still poor rectification.
+
+    x 1iv: add shift to kir minf => does not help
+
+    x 1iv: reduce number of IV features, replace
+    "steady_state_voltage_stimend" with "minimum_voltage" where sag is
+    visible => Large min errors in log file, low parameter variability.
+
+    + 1iv{,-seed2,-seed3}: time const and volt STD from IV protocols,
+    volt deflection STD same as for voltage_base, e_pas.all [-100, -50],
+    kir.somatic [0, 0.02], kir.basal [0, 0.002], cm.all 1.5 (between 1
+    and 2 for future compat), revert "steady_state_voltage_stimend", no
+    "minimum_voltage".
+
+    x 2iv: optimize cm.all [1, 3] => cm not constrained.
+
+    + 2iv: fixed cm.all 1.5, range g_pas.all [1e-6, 0.002] => e_pas
+    around -50.
+
+    + 3iv: e_pas range [-100, -60], cm [1.5, 2.5] => e_pas at upper bound.
+
+    + 4iv: add shift to kir minf [-10, 10] => OK fit, shift_kir.somatic
+    at lower bound -10.
+
+    + 5iv: shift_kir.somatic [-15, 5], shift_kir.basal 0, Ra 200, e_pas
+    [-80, -60] => even better fit.
+
+    + 6iv: g_pas.all [1e-5, 2e-3], e_pas.all [-80, -60], cm 2, Ra 200,
+    kir.somatic [0, 0.05], kir basal [0, 0.001], shift kir -15 => best
+    fit Z_mean 0.698.
+
+    x 7iv: q_kir [1, 3] to fit time const, shift_kir [-30, -15] to match
+    half-activation below -100mV => q_kir close to 1.
+
+    + 7iv: revert q_kir 1, shift_kir [-30, -15] to match half-activation
+    below -100mV => great fit Z 0.587, shift_kir around -25.
+
+    * 7.1iv: fit voltage_deflection only because of voltage drift between
+    IV and ID protocols => fit Z 0.446.
+
+    x 7.2iv: reduce Ra 150 and ek -95 for lower AHP in ID protocols =>
+    voltage_base is too high (incompat with ID protocols).
+
+    + 7.3iv: revert ek to -105.9, sigmoidal (1, 2) basal cm and g_pas =>
+    great fit Z 0.46, Ra around 125, shift_kir [-30, -25].
+
+    * iv-1: ek -105.9, sigmoidal (1, 2) basal cm and g_pas,
+    cm 1, free g_pas, Ra and shift_kir => fit Z 0.452, mean
+    e_pas.all -69.2055645195733, mean Ra.all 127.1213015337994, mean
+    shift_kir.{somatic,basal} -27.225392200944327; from best_models[0]
+    e_pas, Ra, shift_kir+6 (-69.33214230591342, 137.15460246308174,
+    -23.991914472792228).
+
+    x iv-2: ek -105.9, sigmoidal cm and g_pas, cm 1, Ra 150, free g_pas
+    and shift_kir, revert voltage_base feature => fit Z 0.543, e_pas
+    around -70, shift_kir.somatic at lower bound -30, shift_kir.basal -20.
+
+    + iv-2: ek -105.9, sigmoidal cm and g_pas, cm 1, Ra 150, shift_kir
+    -20, free g_pas and gbar_kir, revert voltage_base feature => fit Z
+    0.97, e_pas -68.87319110837785 from best_models[0].
+
+    x 8id: 3 sub- and 3 supra-threshold traces, time_to_first_spike 1%
+    std; take voltage_base from IDthresh protocol, use IV for deflections
+    only because of voltage drift => high voltage errors
+
+    x 8id: std 1.0mV for voltage deflections, fix cm 2, remove threshold
+    related features (threshold incorrectly detected) AP_begin_voltage,
+    AP_amplitude, AHP_depth, spike_half_width, AP_fall_rate => AP peaks
+    and AHP are off, first spike timing too tight.
+
+    x 8id: remove Spikecount and AP_rise_rate from ID protocols, relax
+    time_to_first_spike 10%, tighten mean_frequency 1% => AHP features
+    still off, naf.basal around upper bound
+
+    x 9id: tighten AHP timing features std/10 => no help, AHP too big
+
+    + 9id: Ra 150, ek -95; e_pas -70, g_pas [1e-5, 1e-2], remove
+    AHP_time_from_peak, long run 500 generations =>    good fit! Slow AHP
+    is smaller and slower than needed, conductanses topped for pas.axonal,
+    kas.axonal, sk.somatic, naf.basal, kdr.basal, bk.basal.
+
+    + 10id: extend some upper bounds, taur_cadyn.somatic 18, q_sk and q_bk
+    3 => better fit (but par 0 only); slow AHP still slower than needed.
+
+    x 11id: revert q_sk and q_bk to 1, add q-factor to cadyn
+    q_cadyn.somatic 3 => worse than 10id, AHP too big; in general,
+    AHP_slow_time is off
+
+    + 11id: repeat 10id without AHP_slow_time (200 generations) =>
+    good fit (esp. par 0, 5)
+
+    x 11.1id: same as 11id but with default cadyn/sk/bk => worse fit,
+    big fast AHP, slow AHP too slow.
+
+    x 12id: same as 11id but q_cadyn.somatic, q_sk, q_bk 3 => worse fit
+    (OK par 1)
+
+    + 12id: same as 11id but taur_cadyn.somatic 14, STD for voltage_base
+    and peak_voltage 1.0 => very good fit! time_to_first_spike and
+    mean_frequency could be better.
+
+    x 13id: same as 12id, tighten STD for time_to_first_spike and
+    mean_frequency to 1% => fast AHP too strong
+
+    + 13id: same as 12id, tighten STD for time_to_first_spike and
+    mean_frequency to 5% => better fit of time_to_first_spike, worse
+    mean_frequency, good candidates par 0-3,8,9.
+
+    x 13.1id: same as 13id, revert ek -105.9 => no big change,
+    mean_frequency is low, AHP becomes mono-phasic (for some parameters)
+    and slower.
+
+    + 13.2id: same as 13.1id, decrease STD for mean_frequency by 0.5,
+    both taur_cadyn.{somatic,basal} 14 => good fit, mono AHP.
+
+    x 13.3id: same as 13.2id, increase axonal naf, kas and Im,
+    revert features AP_begin_voltage, AP_fall_rate, AP_rise_rate,
+    spike_half_width => threshold is fine, rates are off, too big AHP.
+
+    x 13.3id: put naf, kaf, kas, kdr, Im to axon exactly as in soma,
+    remove AP_*_rate features => unusable
+
+    + 13.4id: same as 13.2id, relax Ra [100, 200] => great fit, gbar
+    topped for g_pas.axonal, naf.axonal, Im.axonal
+
+    * 13.5id: same as 13.4id, double range for g_pas.axonal, naf.axonal,
+    Im.axonal => par [4,7,8,9] great, all params within bounds, median
+    Ra 185.
+
+    + 13.6id: same as 13.5id, sigmoidal basal cm and g_pas => all
+    good except slow AHP profile, AHP_abs detected as AHP_abs_slow,
+    min_voltage_between_spikes is duplicate too; Ra ~150.
+
+    x 13.7id: remove AHP_depth_abs_slow, use same STD for AHP_depth_abs
+    and min_voltage_between_spikes (maybe use original?), fix Ra 150,
+    revert q_kaf 1.0 (was 1.23), limit somatic bk/sk from below [1e-4,
+    1e-3] => too fast slow AHP, gbar_kas.axonal around upper bound,
+    q_{bk,sk} have little effect.
+
+    x 13.7id: revert STD for AHP_depth_abs and min_voltage_between_spikes
+    to exp values, extend gbar_kas.axonal [0, 0.5], taur_cadyn 21.5,
+    revert q_{bk,sk} to 1 => evolution continues, kas axonal within [0,
+    0.2], AHP_depth_abs == min_voltage (weak slow component).
+
+    + 13.7id: revert kas.axonal to [0,0.2], use same STD for AHP_depth_abs
+    and min_voltage_between_spike, taur_cadyn 14 => good fit, could
+    be better.
+
+    + 13.8id: same as 13.7id, longer evolution (500 gen) => good fit
+    Z=1.81, slow AHP still smaller than exp, axonal kas and Im topped
+    at 0.2.
+
+    x id-1: based on iv-1 and 13.8id, fixed e_pas, Ra and shift_kir from
+    means of iv-1 => worse than 13.8id fit, Z 3.5
+
+    + id-1: based on iv-1 and 13.8id, fixed e_pas, Ra and shift_kir from
+    best_models[0] of iv-1, shift_kir is adjusted +6mV for the voltage
+    drift between iv and id protocols (800 gen) => fit Z 2.0-2.3
+
+    + id-2: fixed Ra 150 and shift_kir -20, free e_pas.all and g_pas.*
+    (500 gen, 14.3h, possibly converged after 200 gen) => moderate Z 3.08
+
+    + id-3: based on iv-2, fixed Ra 150, shift_kir -20, e_pas.all
+    -68.87319110837785 (500 gen, 14h) => fit Z 1.4-1.8; 1 model validated,
+    too strong bap_ca.
+
+    x id-4: limit basal naf [0, 0.1] and kaf [0.001, 0.1] (300 gen) =>
+    voltage_base and voltage_deflection_begin are way off, kaf.basal
+    tops at 0.1 for some reasons, naf is small everywhere; all bap_ca
+    validated.
+
+    + id-4: limit basal naf [0, 0.1] and kaf [0.0001, 0.1] (300 gen) =>
+    fit Z 1.8-2.2, all looks good; all 10 validated including bap_ca test.
+
+    * id-5: same as id-4 (500 gen) => fit Z 1.8-2.1; validated n=9
+    (one bap_ca test discarded).
+
+    ? validate with bap_ca
+
+    ? try Robert's mod-files (ca related?), decrease/optimize? ek,
+    decrease/opt ca tau, decrease Ra, opt e_pas in id
+
+- mCP-dspn-e160118_c9_D1-manimal_1_n18_04102017_cel1, rheo 511.77
+
+- mCP-dspn-e160118_c9_D1-manimal_5_n22_04102017_cel2, rheo 511.77
+
+- mCP-dspn-e150917_c10_D1-manimal_5_n27_04102017_cel2, rheo 538.68
+
+- mCP-dspn-e150602_c9_D1-manimal_5_n22_04102017_cel1, rheo 543.32
+
+x mCP-dspn-e160118_c8_D1-manimal_5_n18_04102017_cel1, rheo 566.91
+
+  + iv-0: initial config, voltage deflection STD 1 mV, voltage_base
+  0.1 mV, e_pas [-80, -60] => best fit Z 2.14, e_pas -79.67222318595041
+  from best_models[0].
+
+  x id-0: initial config, e_pas -79.67222318595041 from iv-0, voltage
+  STD 1 mV, decrease kir => no spikes
+
+  x id-1: parameters from 1509*c9* model => nope
+
+  x id-1: relax IV features, extend g ranges, decrease bk/sk, [...] => ?
+
+- mCP-dspn-e160118_c8_D1-manimal_1_n27_04102017_cel1, rheo 566.91
+
+  + iv-0: parameters from 15*c9* cell => best fit Z 0.734, e_pas
+  -89.38879800633171 from best_models[0].
+
+  x id-0: parameters from 15*c9* cell, e_pas -89.38879800633171 (ngen 100)
+  => Z-score mean 3.168, range 2.742-3.648, IV features off.
+
+  + id-1: e_pas -89.38879800633171, g_pas and kir constraints from iv-0
+  (ngen 100) => Z-score mean 4.873, range 2.550-22.591, validated 1
+  (ap_peak discarded).
+
+  + id-1a: same as id-1 (ngen 500) => Z-score mean 4.798, range
+  2.309-22.570, validated 1 (discarded ap_peak and bap_ca).
+
+  + id-1b: increase kaf.basal [0.01,0.1] (ngen 100) => Z-score mean 3.446,
+  range 2.810-4.308, validated 1 (discarded ap_peak).
+
+  ? combine all validated models or raise threshold to 3.5
+
+  ? try smaller morphology to better fit fI curve
+
+* mCP-dspn-e160118_c8_D1-manimal_5_n27_04102017_cel2, rheo 566.91 (morph
+  smaller than mapped originally)
+
+  + iv-0: parameters from 16*c8* => e_pas -89.98487036684676
+
+  x id-0: parameters from 16*c8* id-1b, e_pas and kir bounds from
+  iv-0 (ngen 200) => Z-score mean 3.308, range 2.869-3.621, ahp shape
+  distorted, validated 2 (discarded ap_peak and ahp, lower fI in general).
+
+  x id-1: reduce bk, sk, Im, kdr, kas (ngen 100) => Z-score mean 2.991,
+  range 2.543-3.321, ahp too strong, freq low, validated 0 (ap_peak,
+  fI features).
+
+  + id-1a: reduce freq STD 1%, relax time const STD (ngen 100) => Z-score
+  mean 3.908, range 3.547-4.191, validated 2  in others(Z close to 3
+  in others).
+
+  + id-1b: same parameters as in id-0, features from id-1a => Z-score
+  mean 4.503, range 3.275-4.935, validated 3 (ap_peak discarded).
+
+  * id-2: same as id-1b, updated distance dependence from 6m-age data =>
+  fit 4735580 Z-score mean 3.328, range 2.698-3.878, validated 9 (ap_peak
+  excluded, fits cell data perfectly but poorly validated by population).
+
+* mCP-dspn-e150917_c9_D1-manimal_1_n27_04102017_cel1, rheo 605.95,
+  a high rheobase cell
+
+    x iv-0: initial config, all IV features, modified mCP-*_c6_* cell,
+    Ra 150, Cm/g_pas distributed, shift_kir -20, q_kir 1 => 1500 sec
+    for 20 gen.
+
+    + iv-1: voltage STD 0.16330569494049957 and time const STD
+    1.3567352562514015 from IV protocol => fit Z 0.996, e_pas
+    -88.24462072341888 from best_models[0].
+
+    x id-0: initial config, e_pas -88.24462072341888 from iv-1
+
+    x id-1: mean_frequency and time_to_first_spike STD 5%, voltage_base
+    STD 1.0 => bad fit; {kas,Im}.axonal and kdr.somatic at upper bound.
+
+    + id-1: reduce all voltage STD to 1.0 in IV protocols, extend
+    kas.axonal [0, 0.5], Im.axonal [1e-3, 0.5], kdr.somatic [0, 0.005]
+    => still big error although looks good, fit Z > 3.3, kas.axonal and
+    kdr.somatic around upper bounds.
+
+    x id-1a: same as id-1, free e_pas [-90, -60] => e_pas close to upper
+    bound (?), voltage deflection is wrong, AHP shape good.
+
+    x id-2: same as id-1, extend kas.axonal [0, 1] and kdr.somatic [0,
+    0.1] (200 gen) => same fit, too high rate (low bk/sk?), voltage_base
+    is off.
+
+    x id-2: increase lower bound {bk,sk}.somatic [1e-4, 2e-3] (100 gen)
+    => bad AHP
+
+    x id-2: revert bk/sk (500 gen) => fit Z > 3.7, does not improve
+    after 200 gen.
+
+    + id-2: replace mean_frequency with inv_first_ISI, STD 5% => looks
+    good, still big error, fit Z > 4.
+
+    + id-3: extend g_pas.axonal [1e-5, 0.05], voltage STD
+    from voltage_base of ID protocol 0.6665114402619069, STD
+    time_to_first_spike 4% (200 gen, 12h) => fit Z 3.8(#1)-4.6(#9),
+    few solutions look good, time_to_first_spike hard to fit.
+
+    + id-3a: same as id-3, relax time_to_first_spike STD 20% => fit Z
+    2.9(#5)-4.0(#7), very slow convergence; validated 10 bu none for
+    bap_ca (mean around 1.0, z > 4).
+
+    x id-3b: decrease inv_first_ISI STD 2%, increase lower bound kaf.basal
+    [0.01, 0.1] => fit Z 3.7(#3)-4.6(#8), somewhat distorted AHP.
+
+    + id-3b: inv_first_ISI STD 10% 5% 1%, decrease lower bound kaf.basal
+    [0.005, 0.1], revert cadyn.taur 43 => fit Z 3.9, g_pas.axonal at top,
+    inv_first_ISI high err at upper freq.
+
+    x id-3c: revert g_pas.axonal [1e-5, 0.05], inv_first_ISI STD 10% 5%
+    1% => fit Z 3.9(#0), f-I slope too high -- {bk,sk}.somatic too low?
+
+    + id-3c: raise lower bound {bk,sk}.somatic [1e-4, 2e-3], inv_first_ISI
+    STD 10% 5% 2%, cadyn.taur 20, remove low-freq AHP_slow_time and
+    high-freq peak_voltage => fit Z 2.4(#0)-3.9(#6), AHP bit distorted;
+    select [0,2,3,4,5,6,7], validated 4, rejected 3 by bap_ca.
+
+    + id-3d: revert cadyn.taur 43 => fit Z 3.5; validated 3, rejections
+    due to low fitbaserate.
+
+    x id-3e: raise lower bound {bk,sk}.somatic [2e-4, 2e-3], decrease
+    cadyn.taur 20, ngens 200 => fit Z 2.6, distorted AHP.
+
+    + id-3e0: {bk,sk}.somatic [1e-4, 2e-3], cadyn.taur 20 => fit Z > 3,
+    bit distorted AHP but all 10 validated!
+
+    x id-3e: {bk,sk}.somatic [1e-5, 2e-3], cadyn.taur 20 => fit Z 2.4,
+    AHP looks better, none validated due to high bap_ca
+
+    x id-3e: {bk,sk}.somatic [1e-4, 1e-3], cadyn.taur 20 => fit Z 2.5,
+    AHP is ok, validated 6, rejected 4 due to bap_ca.
+
+    x id-3e: {bk,sk}.somatic [1e-4, 1e-3], cadyn.taur 20, increase lower
+    bound kaf.basal [0.01, 0.1] => distorted AHP.
+
+    x id-3f: {bk,sk}.somatic [1e-5, 2e-3], cadyn.taur 14 => fit Z 2.4,
+    AHP variable (some good), validated 1, high bap_ca
+
+    * id-3g: {bk,sk}.somatic [1e-4, 2e-3], taur_cadyn.somatic 14,
+    taur_cadyn.basal 43 => fit Z 2.6, AHP bit too sharp, validated all 10.
+
+    x id-3h: {bk,sk}.somatic [1e-4, 2e-3], taur_cadyn.somatic 14,
+    taur_cadyn.basal 14 => surprisingly poor fit.
+
+    x id-3h: {bk,sk}.somatic [1e-4, 2e-3], bounds
+    taur_cadyn.{somatic,basal} [15,45] => AHP too slow.
+
+- mCP-dspn-e150908_c6_D1-manimal_1_n30_04102017_cel2, rheo 689.49
+
+
+== Human cells
+
+* hPu-dspn-e150917_c6_D1-mAB5_porta76_cel5, rheo 335.18, low rheobase cell
+
+    x iv-0: a copy of corresponding mouse iv-1 => e_pas bottoms at -80,
+    kir is weak
+
+    x iv-1: free shift_kir [-30, -15] => no help, e_pas around -80
+
+    + iv-1: revert shift_kir -20, extend e_pas range [-90, -70] =>
+    fit Z 1.6, e_pas best_models[0] -86.08166339846443.
+
+    + iv-2: same as iv-1, fixed "distance" dist_type => best fit 3.034,
+    time const is bigger, e_pas -86.59039914376213 from best_models[0].
+
+    + id-1: same as corresponding mouse id-3i, e_pas from iv-1
+    -86.08166339846443 + 4mV voltage drift, channels dist scaled by 1.7 =>
+    fit Z 5.1-5.7, looks good; validated 3
+
+    + id-2: same as id-1, dend pas rescaled to human spine density =>
+    Z-score mean 5.519, range 5.244-5.738, validated 1 (hof 2).
+
+    * id-3: same as id-2, fixed "distance" dist_type, e_pas
+    -86.59039914376213 (ngen 200) => Z-score mean 6.669, range
+    6.264-6.990, validated (excluded 0,2,4,6,8 dep block) 5.
+
+- hPu-dspn-e150602_c1_D1-mAB5_porta76_cel3, rheo 444.74, smaller than
+median rheobase
+
+    + iv-0: a copy of corresponding mouse iv-1 => fit Z 0.8, e_pas
+    -72.13423678905777 from best_models[0]
+
+    x id-0: same as corresponding mouse id-1b, channel dist scaled by
+    1.7 => no convergence!
+
+    x id-1: same as corresponding mouse id-1b, channel dist scaled by
+    1.7, fixed kir and passive values from iv-0 (ngen 300) => fit Z 2.9,
+    AHP and voltage_peak are off, bap_ca too high.
+
+    x id-1a: same as id-1, kir and passive values from iv-0 in bounds
+    [x/10, x*10] (ngen 100) => AHP/min_voltage off.
+
+    x id-1b: same as id-1, min_voltage and ahp_depth_abs STD/10 (ngen 100)
+    => min_voltage is closer, AHP and peak_voltage are off.
+
+    x id-1c: same as id-1, {bk,sk}.somatic [0, 1e-3], Im.{axonal,somatic}
+    [0, x] (nseg 300) => fit Z 2.5, no fast AHP, wide spike, validated >4.
+
+    x id-1c: same as id-1, low bound 0 for {bk,sk}.somatic
+    and Im.{axonal,somatic}, increase kaf.somatic [0.1,5], add
+    AHP_time_from_peak (nseg 100) => fast AHP too small, slow AHP too big,
+    voltage_peak too high.
+
+    x id-1d: same as id-1c, decrease naf.{axonal,somatic} [0,10],
+    AHP_time_from_peak STD from D1 pop 0.571 (nseg 100) => selected 5,
+    fit Z 3.8(#1)-3.9(#8), bap_ca is high.
+
+    + id-1e: same as id-1d, decrease naf.basal [0,0.05], increase
+    kaf.basal [0.01,0.1] => fit Z 3.7, validated 4.
+
+    x id-1f: same as id-1d, decrease naf.basal [0,0.05], increase
+    kaf.basal [0.03,0.1] (nseg 200) => no spikes!
+
+    x id-1f: same as id-1d, decrease naf.basal [0,0.05], increase
+    kaf.basal [0.03,0.1], revert naf.{axonal,somatic} [0,20] (nseg 200)
+    => too large AP peak-to-peak, fit Z >5, none validated (ap_peak,
+    ap_amplitude; bap_ca passed).
+
+    x id-1g: same as id-1d, decrease naf.basal [0,0.05], increase
+    kaf.basal [0.02,0.1], naf.{axonal,somatic} [0,10] => no spikes at
+    low rate protocol.
+
+    + id-2: same as id-1e, dend pas resacled to human spine density =>
+    Z-score mean 3.680, range 3.629-3.716, validated 8 (hof[0-3,5,6,8,9]).
+
+    ? try all k except kaf.basal [0,x], naf [0,10..12]
+
+* hPu-dspn-e160118_c7_D1-mAB5_porta80A_cel15, rheo 447.40
+
+    + iv-0: a copy of corresponding mouse
+    mCP-dspn-e160118_c7_D1-manimal_1_n30_04102017_cel1 iv-0, dend g_pas
+    and cm rescaled to human spine density => best fit Z 1.029, e_pas
+    -77.30867637240773 from best_models[0].
+
+    + iv-1: same as iv-0, fixed "density" mech (cell_model.py,
+    parameters.json, optimize.sh, job.slurm) => best fit Z 1.962, e_pas
+    -77.43221436866546 from best_models[0], time constant too big.
+
+    x id-0: same as corresponding mouse id-1c, scaled to human
+    distribution, e_pas -77.30867637240773 from iv-0 (ngen 500) => poor
+    convergence in first 100 gens, spikes too wide, Z-score mean 5.514,
+    range 4.616-5.897, validated 0 (ap_peak).
+
+    x id-1: increase kaf.dend [0.02, 0.1] => dep block
+
+    + id-1: adjust kir and g_pas to iv-0, add Spikecount to IDthresh_598
+    => Z-score mean 7.092, range 6.229-7.615, too strong AHP, validated 3
+    (from hof 0-3,5-9), discarded ap_peak and ahp_depth_abs.
+
+    + id-1a: same as id-1, moved to PDC (ngen 500) => Z-score mean 3.877,
+    range 3.641-4.411, validated 7 (skipped 2 depol block and 1 ap_peak).
+
+    * id-2: same as id-1a, fixed "distance" mech, e_pas -77.43221436866546
+    (ngen 500) => Z-score mean 4.503, range 4.165-4.836, time const is
+    big, validated 4 (discarded par 1,2,3,4,7,8 due to depol block).
+
+    x id-3: same as id-2 except g_pas and e_pas from the mouse model
+    mCP-dspn-e160118_c7_D1-manimal_1_n30_04102017_cel1/id-2a =>  poor fit,
+    all featues off
+
+* hPu-dspn-e160118_c7_D1-manimal_1_n30_04102017_cel1_scale2.0r1.7p3b1,
+rheo 447.40, mouse morphology scaled up to the human size (edited soma
+radius, dend radii x1.7, dend terminals -p3 -b1 extended by x2)
+
+  + iv-0: e_pass.all -74.58546221821973 from best_models[0]
+
+  + id-0: same as hPu-dspn-e160118_c7_D1-mAB5_porta80A_cel15, with
+  new morphology and e_pas and kir ranges => Z-score mean 3.913, range
+  3.139-4.634, validated 5 (dep block, ap_peak).
+
+  * id-1: same as id-0, fixed dist_type=distance, type=range and math.exp
+  => fit Z-score mean 4.728, range 4.505-4.977, validated 10 (accept 2
+  ap_peak errors Z < 3.3).
+
+* hPu-dspn-e150908_c5_D1-mAB5_porta76_cel4, rheo 475.42, median cell
+
+    x 1iv: g_pas.all [1e-5, 2e-3], e_pas.all [-80, -60], cm 2, Ra 200,
+    kir.somatic [0, 0.05], kir basal [0, 0.001], shift kir -15 => time
+    const too big.
+
+    + 1iv: g_pas.all [1e-5, 2e-3], e_pas.all [-80, -60], cm [1, 2], Ra
+    200, kir.somatic [0, 0.05], kir basal [0, 0.001], shift kir -15 =>
+    best fit Z_mean 0.633 (cm=1.00-1.07).
+
+    + 2iv: q_kir [1, 2.5] to fit time const, shift_kir [-30, -15] to
+    match half-activation below -100mV => better fit but very slow sim,
+    q/shift kir should be fixed.
+
+    * 2.1iv: fit voltage_deflection only because of voltage drift between
+    IV and ID protocols => OK fit
+
+    x iv-1: ek -105.9, sigmoidal (1, 2) basal cm and g_pas, cm 1,
+    free g_pas, Ra and shift_kir => fit Z 0.506, mean e_pas.all
+    -71.6633177395931, mean Ra.all 196.76973240441743 (-->upper bound),
+    mean shift_kir.{somatic,basal} -21.485588155790253.
+
+    x iv-1: ek -105.9, sigmoidal (1, 2) basal cm and g_pas, cm 1,
+    free g_pas, Ra and shift_kir => e_pas=-72.66174220682123,
+    shift_kir=-26.877576426938628, Ra=275.72805798637694 (-->upper bound).
+
+    + iv-2: fix Ra to mouse value 137.15460246308174 => fit Z 0.694,
+    mean values e_pas=-72.01590789612246, shift_kir=-20.51202627185893;
+    from best_models[0] e_pas, shift_kir+6 (-71.16116862322248,
+    -15.951439872881664).
+
+    + iv-3: same as mouse iv-2, ek -105.9, sigmoidal cm and g_pas, cm 1,
+    Ra 150, shift_kir -20, free g_pas and gbar_kir, revert voltage_base
+    feature => fit Z 0.768, e_pas -69.91052426531806 from best_models[0].
+
+    + id-1: based on iv-2 and mouse id-1, adjust shift_kir
+    +6mV for voltage drift (800 gen, 24h) => fit Z 2.566-2.8,
+    min_voltage_between_spikes is too high, AHP shape quite good.
+
+    x id-2: use mouse id-1 config/ (500 gen, 14.5h) => fit Z 2.8-3.0,
+    looks good but: naf.basal at upper bound, sk/bk at lower bound
+    (bit too strong, mean frequency low).
+
+    + id-2: use mouse id-1 config/, scale channel distance-dependent
+    distribution by factor 1.7 (human dend field radius is ~1.66 times
+    larger), keep {cm,g_pas} scaling as in mouse assuming same spine
+    distribution (500 gen, 15h) => fit Z 2.8-3.0, naf.basal, Im.somatic
+    at upper bound, {bk,sk}.somatic at lower bound (too strong) and AHP
+    seems to oscillate (?).
+
+    + id-3: id-1 with channel distribution scaling (500 gen) => fit Z
+    2.789, looks good, smooth mono-phasic AHP
+
+    + id-4: id-1 with channel distribution scaling, excluded
+    decay_time_constant_after_stim (500 gen) => fit Z 2.192, looks
+    great! with fast and slow AHP.
+
+    + id-5: id-3 but fixed Ra 150 and shift_kir -20, fixed e_pas.all from
+    iv-3 (500 gen, >15h) => fit Z 2.5-2.9, all look good, mean_frequency
+    lower than experiment, naf.axonal and g_pas.axonal topped at upper
+    bound.
+
+    + id-6: same as id-5 with extended g_pas.axonal [1e-5, 5e-2] and
+    naf.axonal [5, 20] (500 gen, 17h) => fit Z 2.9, somatic {bk,sk}
+    at lower bound (AHP too strong).
+
+    + id-7: same as id-6 with lower somatic {bk,sk} [1e-5, 1e-3] (300 gen)
+    => fit Z 3.0-3.4, all looks good; all 10 validated, bap_ca 0.45-0.57
+    (Z 1.6-2.2).
+
+    + id-8: same as id-7 (500 gen) => fit Z 2.6-2.9; validated all 10,
+    bap_ca 0.40-0.45 (Z 1.3-1.6).
+
+    + id-9: same as id-8, dend pas rescaled to human spine density =>
+    Z-score mean 3.248, range 3.017-3.563, validated 3 (hof 5-7).
+
+* hPu-dspn-e160118_c8_D1-mAB5_porta76_cel2, rheo 566.91
+
+  x iv-0: initial config => poor fit of voltage deflection, high
+  time_const error
+
+  + iv-1: relax time constant STD => best fit Z 0.390, e_pas
+  -89.82041192051048 from best_models[0].
+
+  x id-0: parameters from mouse *1601*c8*5_n27* (dist_type, type and
+  math.exp correct already), e_pas, g_pas and kir from iv-1 (ngen 100)
+  => Z-score mean 6.541, range 6.284-6.848, not converged yet, time
+  const is off.
+
+  x id-1: relax time const STD (ngen 500, 10h) => Z-score mean 4.254,
+  range 3.758-4.528, slow ahp seems smaller and slower, validated
+  ? (ap_peak off), too high error in mean_frequency.
+
+  * id-1a: revert mean_frequency STD to 10% (ngen 200) => fit Z-score
+  mean 3.353, range 2.764-3.503, validated 7 (ap_peak off), base rate
+  still too low.
+
+  x id-1b: mean_frequency STD 5% for base rate (ngen 200) => worse fit.
+
+  ? reduce kaf/bk/sk ranges
+
+x hPu-dspn-e160118_c8_D1-mAB5_porta79_cel2, rheo 566.91, a smaller
+morphology than mapped originally
+
+  + iv-0: same as hPu-dspn-e160118_c8_D1-mAB5_porta76_cel2/iv-1 =>
+  best fit Z 0.484, e_pas -89.98372159957296 from best_models[0].
+
+  + iv-1: revert time const STD to 10% => better tau fit for par=9.
+
+  x id-0: same as hPu-dspn-e160118_c8_D1-mAB5_porta76_cel2/id-1a, pas
+  and kir from iv-0 => fit Z-score mean 3.787, range 3.330-3.937, mean
+  frequency low.
+
+  x id-1: pas and kir from iv-1 => fit Z-score mean 3.189, range
+  2.818-3.534, low frequency, to be validated >= 1.
+
+  x id-1: reduce kaf.basal [0, 0.1] and somatic bk/sk [0, 2e-3] =>
+  worse fit (spike width).
+
+  x id-1: same as id-0, reduce mean_frequency STD to 5% => worse fit
+  (ap_peak, ahp), frequency as low.
+
++ hPu-dspn-e150917_c9_D1-mAB5_porta80A_cel12, rheo 605.95, a high
+rheobase cell
+
+    + iv-0: a copy of corresponding mouse iv-1 => fit Z 1.746, e_pas
+    best_models[0] -89.03203311385172.
+
+    x id-1a: same as corresponding mouse id-3c, e_pas from iv-0
+    -89.03203311385172, channel dist scaled by 1.7 (500 gen, 13h) => fit
+    Z 2.7(#0)-3.0(#9); none validated due to bap_ca (mean 0.9+, z 3-4).
+
+    + id-1b: increase kaf.basal lower bound [0.01, 0.1] => fit Z 2.3;
+    validated 8.
+
+    x id-2: same as corresponding mouse id-3g, e_pas from human iv-0
+    -89.03203311385172, channel dist scaled by 1.7, increase kaf.basal
+    lower bound [0.01, 0.1] (500 gen, 11h) => fit Z 2.7 (#0), none
+    validated (high bap_ca).
+
+    x id-2a: same as corresponding mouse id-3g, e_pas from human iv-0
+    -89.03203311385172, channel dist scaled by 1.7, increase kaf.basal
+    lower bound [0.02, 0.1] (200 gen) => worse fit > 3, validated 2.
+
+    + id-2b: same as corresponding mouse id-3g, e_pas from human iv-0
+    -89.03203311385172, channel dist scaled by 1.7, increase kaf.basal
+    lower bound [0.03, 0.1], relax {bk,sk}.somatic lower bound [0, 2e-3]
+    (200 gen) => fit Z 2.7 (#0), validated 10.
+
+    + id-3: same as id-2b, dend pas rescaled to human spine density =>
+    Z-score mean 2.830, range 2.581-3.173, validated 8 (hof 0,2,4-9).
+
+
+== Benchmarking
+
+  benchmarks/ testing on PizDaint CSCS (multicore XC40 Intel Broadwell
+  2 x 18-core nodes, 2 CPU per core, 1 node = 72 CPUs).
+
+    x bpopt-scaling-hPu: time scaling for representative optimization
+    task with offspring=280, ngen=100, 1 CPU/task and ntasks=281 (3772
+    s), 141 (5225 s), 71 (8303 s), 36 (14681 s), 18 (26462 s).
+
+    x bpopt-scaling-mCP: time scaling for representative optimization
+    task with offspring=280, ngen=100, 1 CPU/task and ntasks=281 (3868
+    s), 141 (4676 s), 71 (6959 s), 36 (11623 s), 18 (21126 s)
+
+    + strong scaling, representative optimization problem, dSPN, human
+    Putamen, offspring size 570, number of generations 100.
+
+      + bpopt-strong-scaling-hPu-0: initial setup, did not run.
+
+      + bpopt-strong-scaling-hPu-1: 1 nodes, 72 CPUs, job ID 49368586,
+      elapsed time 32860 seconds (9h 7m 40s)
+
+      + bpopt-strong-scaling-hPu-2: 2 nodes, 144 CPUs, job ID 49368605,
+      elapsed time 19579 seconds (5h 26m 19s)
+
+      + bpopt-strong-scaling-hPu-4: 4 nodes, 288 CPUs, job ID 49368611,
+      elapsed time 12825 seconds (3h 33m 45s)
+
+      + bpopt-strong-scaling-hPu-8: 8 nodes, 576 CPUs, job ID 49368612,
+      elapsed time 9806 seconds (2h 43m 26s)
+
+    + strong scaling, representative optimization problem, dSPN, mouse
+    CaudoPutamen, offspring size 570, number of generations 100.
+
+      + bpopt-strong-scaling-mCP-0: initial setup, did not run.
+
+      + bpopt-strong-scaling-mCP-1: 1 nodes, 72 CPUs, job ID 49368984,
+      elapsed time 36596 seconds (10h 9m 56s)
+
+      + bpopt-strong-scaling-mCP-2: 2 nodes, 144 CPUs, job ID 49368994,
+      elapsed time 23494 seconds (6h 31m 34s)
+
+      + bpopt-strong-scaling-mCP-4: 4 nodes, 288 CPUs, job ID 49368995,
+      elapsed time 16322 seconds (4h 32m 2s)
+
+      + bpopt-strong-scaling-mCP-8: 8 nodes, 576 CPUs, job ID 49369002,
+      elapsed time 13981 seconds (3h 53m 1s)
+

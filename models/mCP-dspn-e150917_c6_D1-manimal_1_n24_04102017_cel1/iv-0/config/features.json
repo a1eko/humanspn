@@ -1,0 +1,218 @@
+{
+    "IV_499": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                5.5385,
+                0.5538
+            ],
+            "steady_state_voltage": [
+                -84.4315,
+                8.4432
+            ],
+            "steady_state_voltage_stimend": [
+                -106.5787,
+                10.6579
+            ],
+            "voltage_base": [
+                -83.9527,
+                8.3953
+            ],
+            "voltage_deflection": [
+                -22.5963,
+                2.2596
+            ],
+            "voltage_deflection_begin": [
+                -21.2716,
+                2.1272
+            ],
+            "voltage_deflection_vb_ssse": [
+                -22.626,
+                2.2626
+            ]
+        }
+    },
+    "IV_500": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                6.0208,
+                0.6021
+            ],
+            "steady_state_voltage": [
+                -84.4535,
+                8.4453
+            ],
+            "steady_state_voltage_stimend": [
+                -103.2501,
+                10.325
+            ],
+            "voltage_base": [
+                -83.9589,
+                8.3959
+            ],
+            "voltage_deflection": [
+                -19.3427,
+                1.9343
+            ],
+            "voltage_deflection_begin": [
+                -18.6633,
+                1.8663
+            ],
+            "voltage_deflection_vb_ssse": [
+                -19.2912,
+                1.9291
+            ]
+        }
+    },
+    "IV_502": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                6.0273,
+                0.6027
+            ],
+            "steady_state_voltage": [
+                -84.5701,
+                8.457
+            ],
+            "steady_state_voltage_stimend": [
+                -96.0887,
+                9.6089
+            ],
+            "voltage_base": [
+                -84.1353,
+                8.4135
+            ],
+            "voltage_deflection": [
+                -11.9534,
+                1.1953
+            ],
+            "voltage_deflection_begin": [
+                -11.5924,
+                1.1592
+            ],
+            "voltage_deflection_vb_ssse": [
+                -11.9534,
+                1.1953
+            ]
+        }
+    },
+    "IV_504": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                7.166,
+                0.7166
+            ],
+            "steady_state_voltage": [
+                -84.6688,
+                8.4669
+            ],
+            "steady_state_voltage_stimend": [
+                -88.6759,
+                8.8676
+            ],
+            "voltage_base": [
+                -84.5435,
+                8.4543
+            ],
+            "voltage_deflection": [
+                -4.0583,
+                0.4058
+            ],
+            "voltage_deflection_begin": [
+                -4.0113,
+                0.4011
+            ],
+            "voltage_deflection_vb_ssse": [
+                -4.1324,
+                0.4132
+            ]
+        }
+    },
+    "IV_506": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                5.646,
+                0.5646
+            ],
+            "steady_state_voltage": [
+                -84.3763,
+                8.4376
+            ],
+            "steady_state_voltage_stimend": [
+                -80.1575,
+                8.0158
+            ],
+            "voltage_base": [
+                -84.5413,
+                8.4541
+            ],
+            "voltage_deflection": [
+                4.3205,
+                0.4321
+            ],
+            "voltage_deflection_begin": [
+                4.2592,
+                0.4259
+            ],
+            "voltage_deflection_vb_ssse": [
+                4.3838,
+                0.4384
+            ]
+        }
+    },
+    "IV_508": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                8.2536,
+                0.8254
+            ],
+            "steady_state_voltage": [
+                -84.0933,
+                8.4093
+            ],
+            "steady_state_voltage_stimend": [
+                -70.0247,
+                7.0025
+            ],
+            "voltage_base": [
+                -84.5548,
+                8.4555
+            ],
+            "voltage_deflection": [
+                14.6974,
+                1.4697
+            ],
+            "voltage_deflection_begin": [
+                14.3086,
+                1.4309
+            ],
+            "voltage_deflection_vb_ssse": [
+                14.5301,
+                1.453
+            ]
+        }
+    }
+}

@@ -1,0 +1,17 @@
+Morphology of human striatal projection neurons
+===============================================
+
+Processing and analysis of morphological reconstructions of human
+and mouse striatal projection neurons from the Javier DeFelipe Lab
+(Laboratorio Cajal de Circuitos Corticales, Centro de Tecnología
+Biomédica, Universidad Politécnica de Madrid), performed at the
+Sten Grillner Lab (Department of Neuroscience, Karolinska Institutet,
+Stockholm, Sweden).
+
+* analysis/ - morphometric analysis of the reconstructions.
+
+* data/ - original and derived morphological reconstructions.
+
+* scripts/ - data processing scripts.
+
+See README files inside the repository for details.

@@ -1,0 +1,20 @@
+Optimizing SPN models using mouse electrophysiology and human
+morphological reconstructions.
+
+Single-cell models are optimised using BluePyOpt on a
+supercomputer. Values of the optimised free parameters are returned in
+'best_models.json' file for best scoring models (n=10). Jupyter notebook
+'select.ipynb' is used to manually select models for a release, stored
+in 'hall_of_fame.json' file (n<=10). Release model is always #0 in the
+hall_of_fame file. Other models can also be accepted after validation
+against average features of the population of cells. Script 'variate.py'
+(or 'pvariate.sh' for parallel multithread execution) is used to try
+different combinations of optimised electrophysiological parameters and
+morphological reconstructions (or modifications of the morphology used
+for optimisation). Returns ephys features of the model combinations in
+'var_models.json'. Script 'validate.py' is used to validate the models
+against the population features; returns 'val_models.json'. For further
+sanity check, a visual inspection of the plots of the model responses
+is used.
+
+March 2023

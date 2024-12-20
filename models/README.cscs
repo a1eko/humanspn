@@ -1,0 +1,33 @@
+Multi-factor authentication at CSCS
+
+Set up the local environment following these instructions:
+
+    https://user.cscs.ch/access/auth/mfa/
+
+Use multi-factor authentication to login to CSCS machines (example for
+user 'bp000145'):
+
+    cscs-keygen.sh
+    eval `ssh-agent`
+    ssh-add -t 1d ~/.ssh/cscs-key
+    ssh -A bp000145@ela.cscs.ch
+
+Once on the login node 'ela', go to PizDaint:
+
+    ssh daint.cscs.ch
+
+Setting up of the virtual environment on PizDaint CSCS for BluePyOpt
+optimisations:
+
+    module load daint-mc
+    module swap PrgEnv-cray PrgEnv-gnu
+    #source $HOME/.local/venv/bpopt/bin/activate
+    source $SCRATCH/local/venv/bpopt/bin/activate
+
+Use rsync for file transfer from/to CSCS:
+
+    rsync -auvz -e "ssh -i ~/.ssh/cscs-key" bp000145@ela.cscs.ch:/scratch/snx3000/bp000145/<path1> ~/<path2>
+    rsync -auvz -e "ssh -i ~/.ssh/cscs-key" bp000145@ela.cscs.ch:/users/bp000145/<path1> ~/<path2>
+    rsync -auvz -e "ssh -i ~/.ssh/cscs-key" ~/<path2> bp000145@ela.cscs.ch:/users/bp000145/<path1> 
+
+September 2023

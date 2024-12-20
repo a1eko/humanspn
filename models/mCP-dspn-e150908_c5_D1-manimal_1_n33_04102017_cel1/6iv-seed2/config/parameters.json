@@ -1,0 +1,90 @@
+[
+    {
+        "param_name": "celsius",
+        "type": "global",
+        "value": 35
+    },
+    {
+        "param_name": "v_init",
+        "type": "global",
+        "value": -85.0
+    },
+    {
+        "param_name": "g_pas",
+        "sectionlist": "all",
+        "type": "section",
+        "dist_type": "uniform",
+        "bounds": [1e-5, 2e-3]
+    },
+    {
+        "param_name": "e_pas",
+        "sectionlist": "all",
+        "type": "section",
+        "dist_type": "uniform",
+        "bounds": [-80, -60]
+    },
+    {
+        "param_name": "cm",
+        "sectionlist": "all",
+        "type": "section",
+        "dist_type": "uniform",
+        "value": 2
+    },
+    {
+        "param_name": "Ra",
+        "sectionlist": "all",
+        "type": "section",
+        "dist_type": "uniform",
+        "value": 200
+    },
+    {
+        "param_name": "ek",
+        "sectionlist": "somatic",
+        "type": "section",
+        "dist_type": "uniform",
+        "value": -105.9
+    },
+    {
+        "param_name": "ek",
+        "sectionlist": "basal",
+        "type": "section",
+        "dist_type": "uniform",
+        "value": -105.9
+    },
+    {
+        "param_name": "gbar_kir",
+        "mech": "kir",
+        "bounds": [0, 0.05] ,
+        "dist_type": "uniform",
+        "mech_param": "gbar",
+        "type": "range",
+        "sectionlist": "somatic"
+    },
+    {
+        "param_name": "shift_kir",
+        "mech": "kir",
+        "value": -15,
+        "dist_type": "uniform",
+        "mech_param": "shift",
+        "type": "range",
+        "sectionlist": "somatic"
+    },
+    {
+        "param_name": "gbar_kir",
+        "mech": "kir",
+        "bounds": [0, 0.001] ,
+        "dist_type": "uniform",
+        "mech_param": "gbar",
+        "type": "range",
+        "sectionlist": "basal"
+    },
+    {
+        "param_name": "shift_kir",
+        "mech": "kir",
+        "value": -15,
+        "dist_type": "uniform",
+        "mech_param": "shift",
+        "type": "range",
+        "sectionlist": "basal"
+    }
+]

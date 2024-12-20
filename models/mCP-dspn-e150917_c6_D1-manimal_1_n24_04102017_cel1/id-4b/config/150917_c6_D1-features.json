@@ -1,0 +1,3282 @@
+{
+    "APWaveform_515": {
+        "soma": {
+            "AHP_depth": [
+                33.9042,
+                2.7286
+            ],
+            "AHP_depth_abs": [
+                -50.8479,
+                2.7286
+            ],
+            "AHP_time_from_peak": [
+                2.2,
+                0.1414
+            ],
+            "AP_amplitude": [
+                86.8166,
+                19.9632
+            ],
+            "AP_begin_voltage": [
+                -55.1042,
+                21.1429
+            ],
+            "AP_fall_rate": [
+                -52.4776,
+                4.4356
+            ],
+            "AP_rise_rate": [
+                83.9022,
+                52.723
+            ],
+            "peak_voltage": [
+                31.7125,
+                1.1993
+            ],
+            "spike_half_width": [
+                1.0149,
+                0.0681
+            ]
+        }
+    },
+    "APWaveform_516": {
+        "soma": {
+            "AHP_depth": [
+                38.7547,
+                3.3692
+            ],
+            "AHP_depth_abs": [
+                -45.8797,
+                3.3692
+            ],
+            "AHP_time_from_peak": [
+                2.525,
+                0.37
+            ],
+            "AP_amplitude": [
+                82.164,
+                19.8492
+            ],
+            "AP_begin_voltage": [
+                -48.8422,
+                20.7757
+            ],
+            "AP_fall_rate": [
+                -48.9224,
+                5.6994
+            ],
+            "AP_rise_rate": [
+                87.6899,
+                42.8872
+            ],
+            "peak_voltage": [
+                33.3219,
+                0.985
+            ],
+            "spike_half_width": [
+                1.0763,
+                0.0991
+            ]
+        }
+    },
+    "APWaveform_517": {
+        "soma": {
+            "AHP_depth": [
+                42.2266,
+                3.9211
+            ],
+            "AHP_depth_abs": [
+                -42.3422,
+                3.9211
+            ],
+            "AHP_time_from_peak": [
+                2.6,
+                0.5244
+            ],
+            "AP_amplitude": [
+                78.9538,
+                19.4427
+            ],
+            "AP_begin_voltage": [
+                -44.2875,
+                20.1474
+            ],
+            "AP_fall_rate": [
+                -45.1538,
+                6.7267
+            ],
+            "AP_rise_rate": [
+                89.4847,
+                35.903
+            ],
+            "peak_voltage": [
+                34.6663,
+                0.8011
+            ],
+            "spike_half_width": [
+                1.1136,
+                0.1245
+            ]
+        }
+    },
+    "APWaveform_518": {
+        "soma": {
+            "AHP_depth": [
+                46.4465,
+                3.9813
+            ],
+            "AHP_depth_abs": [
+                -38.39,
+                3.9813
+            ],
+            "AHP_time_from_peak": [
+                3.1,
+                0.9529
+            ],
+            "AP_amplitude": [
+                77.9775,
+                21.2884
+            ],
+            "AP_begin_voltage": [
+                -41.9775,
+                21.5522
+            ],
+            "AP_fall_rate": [
+                -40.9227,
+                8.4838
+            ],
+            "AP_rise_rate": [
+                85.0853,
+                30.8927
+            ],
+            "peak_voltage": [
+                36.0,
+                0.7456
+            ],
+            "spike_half_width": [
+                1.1946,
+                0.1581
+            ]
+        }
+    },
+    "APWaveform_519": {
+        "soma": {
+            "AHP_depth": [
+                44.3729,
+                12.2505
+            ],
+            "AHP_depth_abs": [
+                -40.3625,
+                12.2505
+            ],
+            "AHP_time_from_peak": [
+                3.4167,
+                1.2185
+            ],
+            "AP_amplitude": [
+                74.85,
+                21.0821
+            ],
+            "AP_begin_voltage": [
+                -37.8448,
+                21.0739
+            ],
+            "AP_fall_rate": [
+                -33.3017,
+                17.7703
+            ],
+            "AP_rise_rate": [
+                85.7155,
+                25.0986
+            ],
+            "peak_voltage": [
+                37.0052,
+                0.7334
+            ],
+            "spike_half_width": [
+                1.287,
+                0.2154
+            ]
+        }
+    },
+    "APWaveform_520": {
+        "soma": {
+            "AHP_depth": [
+                46.4813,
+                14.2588
+            ],
+            "AHP_depth_abs": [
+                -38.2885,
+                14.2588
+            ],
+            "AHP_time_from_peak": [
+                3.8167,
+                1.873
+            ],
+            "AP_amplitude": [
+                73.2344,
+                22.5925
+            ],
+            "AP_begin_voltage": [
+                -35.1333,
+                22.3211
+            ],
+            "AP_fall_rate": [
+                -25.2397,
+                19.4152
+            ],
+            "AP_rise_rate": [
+                82.1478,
+                21.9451
+            ],
+            "peak_voltage": [
+                38.1011,
+                0.7264
+            ],
+            "spike_half_width": [
+                1.4245,
+                0.4065
+            ]
+        }
+    },
+    "Delta_562": {
+        "soma": {
+            "decay_time_constant_after_stim": [
+                5.5131,
+                0.5513
+            ],
+            "steady_state_voltage": [
+                -81.6424,
+                8.1642
+            ],
+            "steady_state_voltage_stimend": [
+                -130.6298,
+                13.063
+            ],
+            "voltage_base": [
+                -80.9678,
+                8.0968
+            ]
+        }
+    },
+    "HighResThResp_559": {
+        "soma": {
+            "decay_time_constant_after_stim": [
+                9.6774,
+                0.9677
+            ],
+            "steady_state_voltage": [
+                -80.3008,
+                8.0301
+            ],
+            "steady_state_voltage_stimend": [
+                -54.1185,
+                5.4118
+            ],
+            "voltage_base": [
+                -81.5361,
+                8.1536
+            ]
+        }
+    },
+    "IDrest_527": {
+        "soma": {
+            "AHP_depth": [
+                26.5198,
+                0.7119
+            ],
+            "AHP_depth_abs": [
+                -57.7747,
+                0.7119
+            ],
+            "AHP_depth_abs_slow": [
+                -56.3984,
+                0.478
+            ],
+            "AHP_slow_time": [
+                0.2384,
+                0.0262
+            ],
+            "AHP_time_from_peak": [
+                1.8762,
+                0.0895
+            ],
+            "AP_amplitude": [
+                74.7781,
+                5.7902
+            ],
+            "AP_begin_voltage": [
+                -47.4092,
+                5.7675
+            ],
+            "AP_fall_rate": [
+                -61.7193,
+                1.8911
+            ],
+            "AP_rise_rate": [
+                121.3993,
+                19.3849
+            ],
+            "ISI_CV": [
+                0.0537,
+                0.0054
+            ],
+            "Spikecount": [
+                42.0,
+                4.2
+            ],
+            "adaptation_index2": [
+                -0.0006,
+                0.0001
+            ],
+            "inv_first_ISI": [
+                19.8807,
+                1.9881
+            ],
+            "mean_frequency": [
+                21.4977,
+                2.1498
+            ],
+            "min_voltage_between_spikes": [
+                -57.7802,
+                0.7197
+            ],
+            "peak_voltage": [
+                27.3689,
+                0.3476
+            ],
+            "spike_half_width": [
+                0.9095,
+                0.0057
+            ],
+            "steady_state_voltage": [
+                -82.2983,
+                8.2298
+            ],
+            "time_to_first_spike": [
+                76.4,
+                7.64
+            ],
+            "voltage_base": [
+                -84.2945,
+                8.4294
+            ]
+        }
+    },
+    "IDrest_528": {
+        "soma": {
+            "AHP_depth": [
+                29.4728,
+                0.9291
+            ],
+            "AHP_depth_abs": [
+                -54.3123,
+                0.9291
+            ],
+            "AHP_depth_abs_slow": [
+                -52.8467,
+                0.6895
+            ],
+            "AHP_slow_time": [
+                0.321,
+                0.0347
+            ],
+            "AHP_time_from_peak": [
+                1.8868,
+                0.0684
+            ],
+            "AP_amplitude": [
+                72.2931,
+                4.8026
+            ],
+            "AP_begin_voltage": [
+                -45.1348,
+                4.7514
+            ],
+            "AP_fall_rate": [
+                -57.6026,
+                1.8167
+            ],
+            "AP_rise_rate": [
+                117.4317,
+                14.8053
+            ],
+            "ISI_CV": [
+                0.0577,
+                0.0058
+            ],
+            "Spikecount": [
+                68.0,
+                6.8
+            ],
+            "adaptation_index2": [
+                0.0013,
+                0.0001
+            ],
+            "inv_first_ISI": [
+                34.4828,
+                3.4483
+            ],
+            "mean_frequency": [
+                34.2207,
+                3.4221
+            ],
+            "min_voltage_between_spikes": [
+                -54.3202,
+                0.938
+            ],
+            "peak_voltage": [
+                27.1583,
+                0.34
+            ],
+            "spike_half_width": [
+                0.9358,
+                0.0097
+            ],
+            "steady_state_voltage": [
+                -81.5546,
+                8.1555
+            ],
+            "time_to_first_spike": [
+                31.5,
+                3.15
+            ],
+            "voltage_base": [
+                -83.7851,
+                8.3785
+            ]
+        }
+    },
+    "IDrest_529": {
+        "soma": {
+            "AHP_depth": [
+                32.2078,
+                1.3022
+            ],
+            "AHP_depth_abs": [
+                -50.9455,
+                1.3022
+            ],
+            "AHP_depth_abs_slow": [
+                -50.0781,
+                0.8993
+            ],
+            "AHP_slow_time": [
+                0.3649,
+                0.0431
+            ],
+            "AHP_time_from_peak": [
+                1.9905,
+                0.1042
+            ],
+            "AP_amplitude": [
+                69.8534,
+                4.5108
+            ],
+            "AP_begin_voltage": [
+                -43.1426,
+                4.4825
+            ],
+            "AP_fall_rate": [
+                -53.0161,
+                2.0256
+            ],
+            "AP_rise_rate": [
+                109.6322,
+                14.0044
+            ],
+            "ISI_CV": [
+                0.0635,
+                0.0064
+            ],
+            "Spikecount": [
+                84.0,
+                8.4
+            ],
+            "adaptation_index2": [
+                0.0009,
+                0.0001
+            ],
+            "inv_first_ISI": [
+                46.2963,
+                4.6296
+            ],
+            "mean_frequency": [
+                42.3921,
+                4.2392
+            ],
+            "min_voltage_between_spikes": [
+                -50.9543,
+                1.3076
+            ],
+            "peak_voltage": [
+                26.7108,
+                0.4914
+            ],
+            "spike_half_width": [
+                0.9781,
+                0.0151
+            ],
+            "steady_state_voltage": [
+                -80.8568,
+                8.0857
+            ],
+            "time_to_first_spike": [
+                19.6,
+                1.96
+            ],
+            "voltage_base": [
+                -83.1533,
+                8.3153
+            ]
+        }
+    },
+    "IDrest_530": {
+        "soma": {
+            "AHP_depth": [
+                34.6082,
+                3.2341
+            ],
+            "AHP_depth_abs": [
+                -47.8785,
+                3.2341
+            ],
+            "AHP_depth_abs_slow": [
+                -47.6713,
+                1.113
+            ],
+            "AHP_slow_time": [
+                0.4018,
+                0.0441
+            ],
+            "AHP_time_from_peak": [
+                2.2787,
+                1.1802
+            ],
+            "AP_amplitude": [
+                67.2094,
+                4.636
+            ],
+            "AP_begin_voltage": [
+                -41.0851,
+                4.4808
+            ],
+            "AP_fall_rate": [
+                -48.0256,
+                2.4423
+            ],
+            "AP_rise_rate": [
+                101.1011,
+                13.0924
+            ],
+            "ISI_CV": [
+                0.0812,
+                0.0081
+            ],
+            "Spikecount": [
+                94.0,
+                9.4
+            ],
+            "adaptation_index2": [
+                0.0016,
+                0.0002
+            ],
+            "inv_first_ISI": [
+                57.1429,
+                5.7143
+            ],
+            "mean_frequency": [
+                47.0306,
+                4.7031
+            ],
+            "min_voltage_between_spikes": [
+                -47.8417,
+                1.5546
+            ],
+            "peak_voltage": [
+                26.1243,
+                0.6646
+            ],
+            "spike_half_width": [
+                1.0335,
+                0.0402
+            ],
+            "steady_state_voltage": [
+                -79.9716,
+                7.9972
+            ],
+            "time_to_first_spike": [
+                13.0,
+                1.3
+            ],
+            "voltage_base": [
+                -82.4867,
+                8.2487
+            ]
+        }
+    },
+    "IDrest_531": {
+        "soma": {
+            "AHP_depth": [
+                37.3525,
+                1.9928
+            ],
+            "AHP_depth_abs": [
+                -44.6016,
+                1.9928
+            ],
+            "AHP_depth_abs_slow": [
+                -45.7173,
+                1.2306
+            ],
+            "AHP_slow_time": [
+                0.4281,
+                0.0376
+            ],
+            "AHP_time_from_peak": [
+                2.4879,
+                0.238
+            ],
+            "AP_amplitude": [
+                64.4821,
+                4.8913
+            ],
+            "AP_begin_voltage": [
+                -39.2718,
+                4.5731
+            ],
+            "AP_fall_rate": [
+                -42.4942,
+                5.1753
+            ],
+            "AP_rise_rate": [
+                93.503,
+                12.0491
+            ],
+            "ISI_CV": [
+                0.1,
+                0.01
+            ],
+            "Spikecount": [
+                99.0,
+                9.9
+            ],
+            "adaptation_index2": [
+                0.0021,
+                0.0002
+            ],
+            "inv_first_ISI": [
+                68.9655,
+                6.8966
+            ],
+            "mean_frequency": [
+                49.7412,
+                4.9741
+            ],
+            "min_voltage_between_spikes": [
+                -45.835,
+                1.6388
+            ],
+            "peak_voltage": [
+                25.2102,
+                0.8345
+            ],
+            "spike_half_width": [
+                1.0978,
+                0.0388
+            ],
+            "steady_state_voltage": [
+                -79.5835,
+                7.9584
+            ],
+            "time_to_first_spike": [
+                9.3,
+                0.93
+            ],
+            "voltage_base": [
+                -81.9541,
+                8.1954
+            ]
+        }
+    },
+    "IDrest_532": {
+        "soma": {
+            "AHP_depth": [
+                38.5812,
+                2.06
+            ],
+            "AHP_depth_abs": [
+                -42.9161,
+                2.06
+            ],
+            "AHP_depth_abs_slow": [
+                -44.444,
+                1.2929
+            ],
+            "AHP_slow_time": [
+                0.4315,
+                0.0448
+            ],
+            "AHP_time_from_peak": [
+                3.195,
+                0.9858
+            ],
+            "AP_amplitude": [
+                62.1754,
+                5.2391
+            ],
+            "AP_begin_voltage": [
+                -37.9686,
+                4.7533
+            ],
+            "AP_fall_rate": [
+                -36.6455,
+                10.5082
+            ],
+            "AP_rise_rate": [
+                85.414,
+                10.3411
+            ],
+            "ISI_CV": [
+                0.1198,
+                0.012
+            ],
+            "Spikecount": [
+                100.0,
+                10.0
+            ],
+            "adaptation_index2": [
+                0.0022,
+                0.0002
+            ],
+            "inv_first_ISI": [
+                81.3008,
+                8.1301
+            ],
+            "mean_frequency": [
+                50.1278,
+                5.0128
+            ],
+            "min_voltage_between_spikes": [
+                -44.5507,
+                1.6548
+            ],
+            "peak_voltage": [
+                24.2069,
+                0.9927
+            ],
+            "spike_half_width": [
+                1.1574,
+                0.0548
+            ],
+            "steady_state_voltage": [
+                -79.2072,
+                7.9207
+            ],
+            "time_to_first_spike": [
+                7.2,
+                0.72
+            ],
+            "voltage_base": [
+                -81.4974,
+                8.1497
+            ]
+        }
+    },
+    "IDrest_533": {
+        "soma": {
+            "AHP_depth": [
+                39.151,
+                2.0388
+            ],
+            "AHP_depth_abs": [
+                -42.0126,
+                2.0388
+            ],
+            "AHP_depth_abs_slow": [
+                -43.3755,
+                1.2381
+            ],
+            "AHP_slow_time": [
+                0.44,
+                0.0425
+            ],
+            "AHP_time_from_peak": [
+                4.2091,
+                1.4341
+            ],
+            "AP_amplitude": [
+                59.8657,
+                5.4733
+            ],
+            "AP_begin_voltage": [
+                -36.697,
+                4.9075
+            ],
+            "AP_fall_rate": [
+                -33.7463,
+                9.5722
+            ],
+            "AP_rise_rate": [
+                79.0564,
+                9.9032
+            ],
+            "ISI_CV": [
+                0.142,
+                0.0142
+            ],
+            "Spikecount": [
+                99.0,
+                9.9
+            ],
+            "adaptation_index2": [
+                0.0034,
+                0.0003
+            ],
+            "inv_first_ISI": [
+                97.0874,
+                9.7087
+            ],
+            "mean_frequency": [
+                50.0051,
+                5.0005
+            ],
+            "min_voltage_between_spikes": [
+                -43.487,
+                1.646
+            ],
+            "peak_voltage": [
+                23.1687,
+                1.0868
+            ],
+            "spike_half_width": [
+                1.2219,
+                0.0706
+            ],
+            "steady_state_voltage": [
+                -79.0584,
+                7.9058
+            ],
+            "time_to_first_spike": [
+                5.5,
+                0.55
+            ],
+            "voltage_base": [
+                -81.1636,
+                8.1164
+            ]
+        }
+    },
+    "IDrest_534": {
+        "soma": {
+            "AHP_depth": [
+                39.5565,
+                2.0694
+            ],
+            "AHP_depth_abs": [
+                -41.4206,
+                2.0694
+            ],
+            "AHP_depth_abs_slow": [
+                -42.5769,
+                1.3792
+            ],
+            "AHP_slow_time": [
+                0.4301,
+                0.0483
+            ],
+            "AHP_time_from_peak": [
+                4.7433,
+                1.395
+            ],
+            "AP_amplitude": [
+                57.5146,
+                5.8301
+            ],
+            "AP_begin_voltage": [
+                -35.5323,
+                5.1633
+            ],
+            "AP_fall_rate": [
+                -31.5048,
+                9.7334
+            ],
+            "AP_rise_rate": [
+                73.8866,
+                11.1044
+            ],
+            "ISI_CV": [
+                0.1616,
+                0.0162
+            ],
+            "Spikecount": [
+                97.0,
+                9.7
+            ],
+            "adaptation_index2": [
+                0.0032,
+                0.0003
+            ],
+            "inv_first_ISI": [
+                103.0928,
+                10.3093
+            ],
+            "mean_frequency": [
+                48.7731,
+                4.8773
+            ],
+            "min_voltage_between_spikes": [
+                -42.6937,
+                1.7744
+            ],
+            "peak_voltage": [
+                21.9823,
+                1.1211
+            ],
+            "spike_half_width": [
+                1.262,
+                0.0739
+            ],
+            "steady_state_voltage": [
+                -78.9808,
+                7.8981
+            ],
+            "time_to_first_spike": [
+                4.5,
+                0.45
+            ],
+            "voltage_base": [
+                -80.9771,
+                8.0977
+            ]
+        }
+    },
+    "IDrest_535": {
+        "soma": {
+            "AHP_depth": [
+                40.099,
+                4.0548
+            ],
+            "AHP_depth_abs": [
+                -40.8463,
+                4.0548
+            ],
+            "AHP_depth_abs_slow": [
+                -41.3894,
+                1.8424
+            ],
+            "AHP_slow_time": [
+                0.4132,
+                0.0549
+            ],
+            "AHP_time_from_peak": [
+                5.2978,
+                1.4613
+            ],
+            "AP_amplitude": [
+                54.7594,
+                6.7669
+            ],
+            "AP_begin_voltage": [
+                -33.7397,
+                5.8723
+            ],
+            "AP_fall_rate": [
+                -26.0007,
+                12.5741
+            ],
+            "AP_rise_rate": [
+                67.828,
+                11.7973
+            ],
+            "ISI_CV": [
+                0.2876,
+                0.0288
+            ],
+            "Spikecount": [
+                93.0,
+                9.3
+            ],
+            "adaptation_index2": [
+                0.004,
+                0.0004
+            ],
+            "inv_first_ISI": [
+                113.6364,
+                11.3636
+            ],
+            "mean_frequency": [
+                46.5605,
+                4.6561
+            ],
+            "min_voltage_between_spikes": [
+                -41.5211,
+                2.2122
+            ],
+            "peak_voltage": [
+                21.0197,
+                1.2847
+            ],
+            "spike_half_width": [
+                1.328,
+                0.1376
+            ],
+            "steady_state_voltage": [
+                -78.0491,
+                7.8049
+            ],
+            "time_to_first_spike": [
+                3.8,
+                0.38
+            ],
+            "voltage_base": [
+                -80.9453,
+                8.0945
+            ]
+        }
+    },
+    "IDrest_536": {
+        "soma": {
+            "AHP_depth": [
+                41.1921,
+                2.4769
+            ],
+            "AHP_depth_abs": [
+                -38.6959,
+                2.4769
+            ],
+            "AHP_depth_abs_slow": [
+                -39.5215,
+                1.969
+            ],
+            "AHP_slow_time": [
+                0.4019,
+                0.0715
+            ],
+            "AHP_time_from_peak": [
+                5.2932,
+                1.2493
+            ],
+            "AP_amplitude": [
+                52.1879,
+                7.3703
+            ],
+            "AP_begin_voltage": [
+                -31.2266,
+                6.409
+            ],
+            "AP_fall_rate": [
+                -23.863,
+                12.4673
+            ],
+            "AP_rise_rate": [
+                62.0679,
+                12.5107
+            ],
+            "ISI_CV": [
+                0.6248,
+                0.0625
+            ],
+            "Spikecount": [
+                88.0,
+                8.8
+            ],
+            "adaptation_index2": [
+                0.013,
+                0.0013
+            ],
+            "inv_first_ISI": [
+                129.8701,
+                12.987
+            ],
+            "mean_frequency": [
+                44.1834,
+                4.4183
+            ],
+            "min_voltage_between_spikes": [
+                -39.6652,
+                2.3536
+            ],
+            "peak_voltage": [
+                20.9613,
+                1.3047
+            ],
+            "spike_half_width": [
+                1.3702,
+                0.1103
+            ],
+            "steady_state_voltage": [
+                -77.2576,
+                7.7258
+            ],
+            "time_to_first_spike": [
+                3.1,
+                0.31
+            ],
+            "voltage_base": [
+                -79.888,
+                7.9888
+            ]
+        }
+    },
+    "IDthresh-sub_537": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                6.7998,
+                0.68
+            ],
+            "steady_state_voltage": [
+                -78.9821,
+                7.8982
+            ],
+            "steady_state_voltage_stimend": [
+                -62.5925,
+                6.2592
+            ],
+            "voltage_base": [
+                -79.1865,
+                7.9186
+            ],
+            "voltage_deflection": [
+                16.2225,
+                1.6222
+            ],
+            "voltage_deflection_begin": [
+                15.6981,
+                1.5698
+            ],
+            "voltage_deflection_vb_ssse": [
+                16.594,
+                1.6594
+            ]
+        }
+    },
+    "IDthresh-sub_538": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                7.4042,
+                0.7404
+            ],
+            "steady_state_voltage": [
+                -79.0856,
+                7.9086
+            ],
+            "steady_state_voltage_stimend": [
+                -60.2066,
+                6.0207
+            ],
+            "voltage_base": [
+                -79.7242,
+                7.9724
+            ],
+            "voltage_deflection": [
+                19.4405,
+                1.944
+            ],
+            "voltage_deflection_begin": [
+                18.2668,
+                1.8267
+            ],
+            "voltage_deflection_vb_ssse": [
+                19.5176,
+                1.9518
+            ]
+        }
+    },
+    "IDthresh-sub_539": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                8.14,
+                0.814
+            ],
+            "steady_state_voltage": [
+                -79.3715,
+                7.9371
+            ],
+            "steady_state_voltage_stimend": [
+                -58.7286,
+                5.8729
+            ],
+            "voltage_base": [
+                -80.0345,
+                8.0034
+            ],
+            "voltage_deflection": [
+                21.4371,
+                2.1437
+            ],
+            "voltage_deflection_begin": [
+                20.2245,
+                2.0225
+            ],
+            "voltage_deflection_vb_ssse": [
+                21.3059,
+                2.1306
+            ]
+        }
+    },
+    "IDthresh-sub_540": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                8.8276,
+                0.8828
+            ],
+            "steady_state_voltage": [
+                -79.3349,
+                7.9335
+            ],
+            "steady_state_voltage_stimend": [
+                -57.0595,
+                5.706
+            ],
+            "voltage_base": [
+                -80.3255,
+                8.0326
+            ],
+            "voltage_deflection": [
+                23.1834,
+                2.3183
+            ],
+            "voltage_deflection_begin": [
+                22.3287,
+                2.2329
+            ],
+            "voltage_deflection_vb_ssse": [
+                23.266,
+                2.3266
+            ]
+        }
+    },
+    "IDthresh-sub_541": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                8.8778,
+                0.8878
+            ],
+            "steady_state_voltage": [
+                -79.4771,
+                7.9477
+            ],
+            "steady_state_voltage_stimend": [
+                -55.161,
+                5.5161
+            ],
+            "voltage_base": [
+                -80.321,
+                8.0321
+            ],
+            "voltage_deflection": [
+                25.4072,
+                2.5407
+            ],
+            "voltage_deflection_begin": [
+                23.7878,
+                2.3788
+            ],
+            "voltage_deflection_vb_ssse": [
+                25.16,
+                2.516
+            ]
+        }
+    },
+    "IDthresh_543": {
+        "soma": {
+            "AHP_depth": [
+                23.5431,
+                0.8746
+            ],
+            "AHP_depth_abs": [
+                -57.2589,
+                0.8746
+            ],
+            "AHP_depth_abs_slow": [
+                -58.1813,
+                0.4448
+            ],
+            "AHP_slow_time": [
+                0.0732,
+                0.0297
+            ],
+            "AHP_time_from_peak": [
+                2.2,
+                0.0926
+            ],
+            "AP_amplitude": [
+                76.2062,
+                12.0785
+            ],
+            "AP_begin_voltage": [
+                -51.0018,
+                12.0721
+            ],
+            "AP_fall_rate": [
+                -54.3747,
+                1.4654
+            ],
+            "AP_rise_rate": [
+                99.4773,
+                40.8783
+            ],
+            "ISI_CV": [
+                0.3022,
+                0.0302
+            ],
+            "Spikecount": [
+                7.0,
+                0.7
+            ],
+            "adaptation_index2": [
+                0.1049,
+                0.0105
+            ],
+            "inv_first_ISI": [
+                8.8028,
+                0.8803
+            ],
+            "mean_frequency": [
+                4.8571,
+                0.4857
+            ],
+            "min_voltage_between_spikes": [
+                -58.3844,
+                0.6092
+            ],
+            "peak_voltage": [
+                25.2045,
+                0.1545
+            ],
+            "spike_half_width": [
+                0.994,
+                0.0067
+            ],
+            "steady_state_voltage": [
+                -79.1651,
+                7.9165
+            ],
+            "time_to_first_spike": [
+                246.2,
+                24.62
+            ],
+            "voltage_base": [
+                -80.802,
+                8.0802
+            ]
+        }
+    },
+    "IDthresh_544": {
+        "soma": {
+            "AHP_depth": [
+                24.0388,
+                0.8225
+            ],
+            "AHP_depth_abs": [
+                -56.4682,
+                0.8225
+            ],
+            "AHP_depth_abs_slow": [
+                -57.2731,
+                0.3356
+            ],
+            "AHP_slow_time": [
+                0.0895,
+                0.0304
+            ],
+            "AHP_time_from_peak": [
+                2.1417,
+                0.132
+            ],
+            "AP_amplitude": [
+                70.662,
+                1.0074
+            ],
+            "AP_begin_voltage": [
+                -45.3839,
+                1.0974
+            ],
+            "AP_fall_rate": [
+                -54.8092,
+                1.7603
+            ],
+            "AP_rise_rate": [
+                116.3557,
+                4.68
+            ],
+            "ISI_CV": [
+                0.6671,
+                0.0667
+            ],
+            "Spikecount": [
+                12.0,
+                1.2
+            ],
+            "adaptation_index2": [
+                0.0868,
+                0.0087
+            ],
+            "inv_first_ISI": [
+                12.0627,
+                1.2063
+            ],
+            "mean_frequency": [
+                6.0582,
+                0.6058
+            ],
+            "min_voltage_between_spikes": [
+                -57.4011,
+                0.5057
+            ],
+            "peak_voltage": [
+                25.2781,
+                0.2431
+            ],
+            "spike_half_width": [
+                0.9917,
+                0.0108
+            ],
+            "steady_state_voltage": [
+                -79.0932,
+                7.9093
+            ],
+            "time_to_first_spike": [
+                124.9,
+                12.49
+            ],
+            "voltage_base": [
+                -80.507,
+                8.0507
+            ]
+        }
+    },
+    "IDthresh_545": {
+        "soma": {
+            "AHP_depth": [
+                23.0561,
+                4.2006
+            ],
+            "AHP_depth_abs": [
+                -56.9128,
+                4.2006
+            ],
+            "AHP_depth_abs_slow": [
+                -56.7007,
+                0.4235
+            ],
+            "AHP_slow_time": [
+                0.1225,
+                0.0255
+            ],
+            "AHP_time_from_peak": [
+                2.7158,
+                2.615
+            ],
+            "AP_amplitude": [
+                72.3378,
+                7.8793
+            ],
+            "AP_begin_voltage": [
+                -46.9339,
+                7.9042
+            ],
+            "AP_fall_rate": [
+                -55.4903,
+                1.409
+            ],
+            "AP_rise_rate": [
+                103.0891,
+                25.3341
+            ],
+            "ISI_CV": [
+                0.2459,
+                0.0246
+            ],
+            "Spikecount": [
+                19.0,
+                1.9
+            ],
+            "adaptation_index2": [
+                0.015,
+                0.0015
+            ],
+            "inv_first_ISI": [
+                13.3511,
+                1.3351
+            ],
+            "mean_frequency": [
+                9.5188,
+                0.9519
+            ],
+            "min_voltage_between_spikes": [
+                -56.7969,
+                0.5714
+            ],
+            "peak_voltage": [
+                25.1576,
+                0.6351
+            ],
+            "spike_half_width": [
+                1.0005,
+                0.0249
+            ],
+            "steady_state_voltage": [
+                -78.5588,
+                7.8559
+            ],
+            "time_to_first_spike": [
+                91.2,
+                9.12
+            ],
+            "voltage_base": [
+                -79.969,
+                7.9969
+            ]
+        }
+    },
+    "IDthresh_546": {
+        "soma": {
+            "AHP_depth": [
+                24.7821,
+                0.8156
+            ],
+            "AHP_depth_abs": [
+                -55.6279,
+                0.8156
+            ],
+            "AHP_depth_abs_slow": [
+                -56.2865,
+                0.544
+            ],
+            "AHP_slow_time": [
+                0.1573,
+                0.0312
+            ],
+            "AHP_time_from_peak": [
+                2.0731,
+                0.1195
+            ],
+            "AP_amplitude": [
+                71.1639,
+                6.9086
+            ],
+            "AP_begin_voltage": [
+                -46.275,
+                6.8463
+            ],
+            "AP_fall_rate": [
+                -54.5726,
+                1.6968
+            ],
+            "AP_rise_rate": [
+                105.5478,
+                22.5158
+            ],
+            "ISI_CV": [
+                0.211,
+                0.0211
+            ],
+            "Spikecount": [
+                26.0,
+                2.6
+            ],
+            "adaptation_index2": [
+                0.0145,
+                0.0015
+            ],
+            "inv_first_ISI": [
+                16.3132,
+                1.6313
+            ],
+            "mean_frequency": [
+                13.2302,
+                1.323
+            ],
+            "min_voltage_between_spikes": [
+                -56.3833,
+                0.6766
+            ],
+            "peak_voltage": [
+                24.8889,
+                0.2756
+            ],
+            "spike_half_width": [
+                0.9999,
+                0.0066
+            ],
+            "steady_state_voltage": [
+                -78.8532,
+                7.8853
+            ],
+            "time_to_first_spike": [
+                75.3,
+                7.53
+            ],
+            "voltage_base": [
+                -80.41,
+                8.041
+            ]
+        }
+    },
+    "IDthresh_547": {
+        "soma": {
+            "AHP_depth": [
+                25.1404,
+                0.7165
+            ],
+            "AHP_depth_abs": [
+                -55.3385,
+                0.7165
+            ],
+            "AHP_depth_abs_slow": [
+                -56.0107,
+                0.4778
+            ],
+            "AHP_slow_time": [
+                0.1745,
+                0.0303
+            ],
+            "AHP_time_from_peak": [
+                2.0533,
+                0.1284
+            ],
+            "AP_amplitude": [
+                70.6892,
+                6.4684
+            ],
+            "AP_begin_voltage": [
+                -46.0304,
+                6.3886
+            ],
+            "AP_fall_rate": [
+                -54.7566,
+                1.4305
+            ],
+            "AP_rise_rate": [
+                103.1754,
+                20.5017
+            ],
+            "ISI_CV": [
+                0.1598,
+                0.016
+            ],
+            "Spikecount": [
+                30.0,
+                3.0
+            ],
+            "adaptation_index2": [
+                0.0041,
+                0.0004
+            ],
+            "inv_first_ISI": [
+                18.6567,
+                1.8657
+            ],
+            "mean_frequency": [
+                15.2153,
+                1.5215
+            ],
+            "min_voltage_between_spikes": [
+                -56.0748,
+                0.5791
+            ],
+            "peak_voltage": [
+                24.6587,
+                0.2595
+            ],
+            "spike_half_width": [
+                1.0053,
+                0.0062
+            ],
+            "steady_state_voltage": [
+                -79.1488,
+                7.9149
+            ],
+            "time_to_first_spike": [
+                76.8,
+                7.68
+            ],
+            "voltage_base": [
+                -80.479,
+                8.0479
+            ]
+        }
+    },
+    "IDthresh_548": {
+        "soma": {
+            "AHP_depth": [
+                25.675,
+                0.901
+            ],
+            "AHP_depth_abs": [
+                -55.0898,
+                0.901
+            ],
+            "AHP_depth_abs_slow": [
+                -55.7159,
+                0.6396
+            ],
+            "AHP_slow_time": [
+                0.1982,
+                0.0317
+            ],
+            "AHP_time_from_peak": [
+                2.0771,
+                0.1244
+            ],
+            "AP_amplitude": [
+                70.0841,
+                6.0225
+            ],
+            "AP_begin_voltage": [
+                -45.8802,
+                5.9991
+            ],
+            "AP_fall_rate": [
+                -53.8264,
+                1.6103
+            ],
+            "AP_rise_rate": [
+                105.7441,
+                19.4841
+            ],
+            "ISI_CV": [
+                0.151,
+                0.0151
+            ],
+            "Spikecount": [
+                35.0,
+                3.5
+            ],
+            "adaptation_index2": [
+                0.005,
+                0.0005
+            ],
+            "inv_first_ISI": [
+                20.6612,
+                2.0661
+            ],
+            "mean_frequency": [
+                17.5518,
+                1.7552
+            ],
+            "min_voltage_between_spikes": [
+                -55.8005,
+                0.7956
+            ],
+            "peak_voltage": [
+                24.2039,
+                0.2201
+            ],
+            "spike_half_width": [
+                1.0049,
+                0.0059
+            ],
+            "steady_state_voltage": [
+                -79.1561,
+                7.9156
+            ],
+            "time_to_first_spike": [
+                62.0,
+                6.2
+            ],
+            "voltage_base": [
+                -80.7648,
+                8.0765
+            ]
+        }
+    },
+    "IDthresh_549": {
+        "soma": {
+            "AHP_depth": [
+                25.9089,
+                0.9628
+            ],
+            "AHP_depth_abs": [
+                -54.6133,
+                0.9628
+            ],
+            "AHP_depth_abs_slow": [
+                -55.0712,
+                0.6797
+            ],
+            "AHP_slow_time": [
+                0.2154,
+                0.0285
+            ],
+            "AHP_time_from_peak": [
+                2.0474,
+                0.1251
+            ],
+            "AP_amplitude": [
+                69.6317,
+                5.8379
+            ],
+            "AP_begin_voltage": [
+                -45.5413,
+                5.8382
+            ],
+            "AP_fall_rate": [
+                -53.1353,
+                1.5716
+            ],
+            "AP_rise_rate": [
+                103.3609,
+                18.6984
+            ],
+            "ISI_CV": [
+                0.1612,
+                0.0161
+            ],
+            "Spikecount": [
+                38.0,
+                3.8
+            ],
+            "adaptation_index2": [
+                0.0073,
+                0.0007
+            ],
+            "inv_first_ISI": [
+                24.0964,
+                2.4096
+            ],
+            "mean_frequency": [
+                19.5232,
+                1.9523
+            ],
+            "min_voltage_between_spikes": [
+                -55.1644,
+                0.8703
+            ],
+            "peak_voltage": [
+                24.0905,
+                0.214
+            ],
+            "spike_half_width": [
+                1.01,
+                0.0069
+            ],
+            "steady_state_voltage": [
+                -78.665,
+                7.8665
+            ],
+            "time_to_first_spike": [
+                53.7,
+                5.37
+            ],
+            "voltage_base": [
+                -80.5223,
+                8.0522
+            ]
+        }
+    },
+    "IDthresh_550": {
+        "soma": {
+            "AHP_depth": [
+                26.2952,
+                0.8886
+            ],
+            "AHP_depth_abs": [
+                -53.9034,
+                0.8886
+            ],
+            "AHP_depth_abs_slow": [
+                -54.477,
+                0.6462
+            ],
+            "AHP_slow_time": [
+                0.2252,
+                0.0306
+            ],
+            "AHP_time_from_peak": [
+                2.0375,
+                0.1259
+            ],
+            "AP_amplitude": [
+                69.0666,
+                5.8103
+            ],
+            "AP_begin_voltage": [
+                -44.9838,
+                5.7268
+            ],
+            "AP_fall_rate": [
+                -52.8174,
+                1.5995
+            ],
+            "AP_rise_rate": [
+                100.6422,
+                17.5176
+            ],
+            "ISI_CV": [
+                0.1313,
+                0.0131
+            ],
+            "Spikecount": [
+                40.0,
+                4.0
+            ],
+            "adaptation_index2": [
+                0.0036,
+                0.0004
+            ],
+            "inv_first_ISI": [
+                25.8398,
+                2.584
+            ],
+            "mean_frequency": [
+                20.5582,
+                2.0558
+            ],
+            "min_voltage_between_spikes": [
+                -54.5546,
+                0.7976
+            ],
+            "peak_voltage": [
+                24.0828,
+                0.301
+            ],
+            "spike_half_width": [
+                1.0133,
+                0.0069
+            ],
+            "steady_state_voltage": [
+                -78.4578,
+                7.8458
+            ],
+            "time_to_first_spike": [
+                50.0,
+                5.0
+            ],
+            "voltage_base": [
+                -80.1986,
+                8.0199
+            ]
+        }
+    },
+    "IDthresh_551": {
+        "soma": {
+            "AHP_depth": [
+                26.464,
+                0.8862
+            ],
+            "AHP_depth_abs": [
+                -53.7878,
+                0.8862
+            ],
+            "AHP_depth_abs_slow": [
+                -54.3198,
+                0.6485
+            ],
+            "AHP_slow_time": [
+                0.2333,
+                0.032
+            ],
+            "AHP_time_from_peak": [
+                2.014,
+                0.125
+            ],
+            "AP_amplitude": [
+                68.5301,
+                5.4647
+            ],
+            "AP_begin_voltage": [
+                -44.8567,
+                5.53
+            ],
+            "AP_fall_rate": [
+                -52.6,
+                1.5564
+            ],
+            "AP_rise_rate": [
+                100.8843,
+                17.0598
+            ],
+            "ISI_CV": [
+                0.1451,
+                0.0145
+            ],
+            "Spikecount": [
+                43.0,
+                4.3
+            ],
+            "adaptation_index2": [
+                0.0009,
+                0.0001
+            ],
+            "inv_first_ISI": [
+                26.1097,
+                2.611
+            ],
+            "mean_frequency": [
+                21.9994,
+                2.1999
+            ],
+            "min_voltage_between_spikes": [
+                -54.4019,
+                0.8054
+            ],
+            "peak_voltage": [
+                23.6734,
+                0.3418
+            ],
+            "spike_half_width": [
+                1.0158,
+                0.0076
+            ],
+            "steady_state_voltage": [
+                -78.6344,
+                7.8634
+            ],
+            "time_to_first_spike": [
+                44.4,
+                4.44
+            ],
+            "voltage_base": [
+                -80.2518,
+                8.0252
+            ]
+        }
+    },
+    "IDthresh_552": {
+        "soma": {
+            "AHP_depth": [
+                26.5474,
+                0.8974
+            ],
+            "AHP_depth_abs": [
+                -53.8947,
+                0.8974
+            ],
+            "AHP_depth_abs_slow": [
+                -54.3798,
+                0.691
+            ],
+            "AHP_slow_time": [
+                0.2405,
+                0.0399
+            ],
+            "AHP_time_from_peak": [
+                2.0409,
+                0.1174
+            ],
+            "AP_amplitude": [
+                68.2305,
+                5.5083
+            ],
+            "AP_begin_voltage": [
+                -45.0942,
+                5.4446
+            ],
+            "AP_fall_rate": [
+                -52.2627,
+                1.5862
+            ],
+            "AP_rise_rate": [
+                99.6575,
+                16.7818
+            ],
+            "ISI_CV": [
+                0.1914,
+                0.0191
+            ],
+            "Spikecount": [
+                44.0,
+                4.4
+            ],
+            "adaptation_index2": [
+                0.0056,
+                0.0006
+            ],
+            "inv_first_ISI": [
+                25.7732,
+                2.5773
+            ],
+            "mean_frequency": [
+                22.4021,
+                2.2402
+            ],
+            "min_voltage_between_spikes": [
+                -54.4611,
+                0.8596
+            ],
+            "peak_voltage": [
+                23.1364,
+                0.3
+            ],
+            "spike_half_width": [
+                1.022,
+                0.0067
+            ],
+            "steady_state_voltage": [
+                -78.8935,
+                7.8893
+            ],
+            "time_to_first_spike": [
+                39.2,
+                3.92
+            ],
+            "voltage_base": [
+                -80.4422,
+                8.0442
+            ]
+        }
+    },
+    "IDthresh_553": {
+        "soma": {
+            "AHP_depth": [
+                26.8999,
+                0.9675
+            ],
+            "AHP_depth_abs": [
+                -53.6385,
+                0.9675
+            ],
+            "AHP_depth_abs_slow": [
+                -54.1943,
+                0.6627
+            ],
+            "AHP_slow_time": [
+                0.2532,
+                0.0317
+            ],
+            "AHP_time_from_peak": [
+                2.0848,
+                0.1383
+            ],
+            "AP_amplitude": [
+                67.8895,
+                5.4283
+            ],
+            "AP_begin_voltage": [
+                -44.96,
+                5.3805
+            ],
+            "AP_fall_rate": [
+                -51.205,
+                1.5052
+            ],
+            "AP_rise_rate": [
+                98.6802,
+                15.979
+            ],
+            "ISI_CV": [
+                0.1555,
+                0.0156
+            ],
+            "Spikecount": [
+                46.0,
+                4.6
+            ],
+            "adaptation_index2": [
+                0.0014,
+                0.0001
+            ],
+            "inv_first_ISI": [
+                27.027,
+                2.7027
+            ],
+            "mean_frequency": [
+                23.2994,
+                2.3299
+            ],
+            "min_voltage_between_spikes": [
+                -54.2887,
+                0.8721
+            ],
+            "peak_voltage": [
+                22.9295,
+                0.2819
+            ],
+            "spike_half_width": [
+                1.0279,
+                0.0077
+            ],
+            "steady_state_voltage": [
+                -78.9458,
+                7.8946
+            ],
+            "time_to_first_spike": [
+                35.5,
+                3.55
+            ],
+            "voltage_base": [
+                -80.5384,
+                8.0538
+            ]
+        }
+    },
+    "IDthresh_554": {
+        "soma": {
+            "AHP_depth": [
+                26.8721,
+                1.0202
+            ],
+            "AHP_depth_abs": [
+                -53.306,
+                1.0202
+            ],
+            "AHP_depth_abs_slow": [
+                -53.866,
+                0.7353
+            ],
+            "AHP_slow_time": [
+                0.259,
+                0.0277
+            ],
+            "AHP_time_from_peak": [
+                2.0604,
+                0.0952
+            ],
+            "AP_amplitude": [
+                67.4285,
+                5.4117
+            ],
+            "AP_begin_voltage": [
+                -44.6917,
+                5.3211
+            ],
+            "AP_fall_rate": [
+                -51.043,
+                1.7044
+            ],
+            "AP_rise_rate": [
+                97.9191,
+                15.4736
+            ],
+            "ISI_CV": [
+                0.1318,
+                0.0132
+            ],
+            "Spikecount": [
+                48.0,
+                4.8
+            ],
+            "adaptation_index2": [
+                0.0022,
+                0.0002
+            ],
+            "inv_first_ISI": [
+                30.581,
+                3.0581
+            ],
+            "mean_frequency": [
+                24.3136,
+                2.4314
+            ],
+            "min_voltage_between_spikes": [
+                -53.9624,
+                0.9572
+            ],
+            "peak_voltage": [
+                22.7368,
+                0.326
+            ],
+            "spike_half_width": [
+                1.0316,
+                0.0081
+            ],
+            "steady_state_voltage": [
+                -78.601,
+                7.8601
+            ],
+            "time_to_first_spike": [
+                32.1,
+                3.21
+            ],
+            "voltage_base": [
+                -80.1781,
+                8.0178
+            ]
+        }
+    },
+    "IDthresh_555": {
+        "soma": {
+            "AHP_depth": [
+                27.2593,
+                1.0084
+            ],
+            "AHP_depth_abs": [
+                -52.9524,
+                1.0084
+            ],
+            "AHP_depth_abs_slow": [
+                -53.4725,
+                0.8326
+            ],
+            "AHP_slow_time": [
+                0.258,
+                0.0387
+            ],
+            "AHP_time_from_peak": [
+                2.0388,
+                0.1027
+            ],
+            "AP_amplitude": [
+                67.0101,
+                5.4042
+            ],
+            "AP_begin_voltage": [
+                -44.4637,
+                5.2969
+            ],
+            "AP_fall_rate": [
+                -50.4991,
+                1.5762
+            ],
+            "AP_rise_rate": [
+                95.6721,
+                14.6205
+            ],
+            "ISI_CV": [
+                0.1507,
+                0.0151
+            ],
+            "Spikecount": [
+                49.0,
+                4.9
+            ],
+            "adaptation_index2": [
+                0.0044,
+                0.0004
+            ],
+            "inv_first_ISI": [
+                28.0112,
+                2.8011
+            ],
+            "mean_frequency": [
+                24.8328,
+                2.4833
+            ],
+            "min_voltage_between_spikes": [
+                -53.5715,
+                1.0338
+            ],
+            "peak_voltage": [
+                22.5464,
+                0.3028
+            ],
+            "spike_half_width": [
+                1.0364,
+                0.0073
+            ],
+            "steady_state_voltage": [
+                -78.3979,
+                7.8398
+            ],
+            "time_to_first_spike": [
+                29.2,
+                2.92
+            ],
+            "voltage_base": [
+                -80.2118,
+                8.0212
+            ]
+        }
+    },
+    "IDthresh_556": {
+        "soma": {
+            "AHP_depth": [
+                27.4889,
+                1.064
+            ],
+            "AHP_depth_abs": [
+                -52.3783,
+                1.064
+            ],
+            "AHP_depth_abs_slow": [
+                -52.9909,
+                0.9007
+            ],
+            "AHP_slow_time": [
+                0.2668,
+                0.0321
+            ],
+            "AHP_time_from_peak": [
+                2.076,
+                0.1159
+            ],
+            "AP_amplitude": [
+                66.8412,
+                5.2825
+            ],
+            "AP_begin_voltage": [
+                -44.2461,
+                5.2223
+            ],
+            "AP_fall_rate": [
+                -50.004,
+                1.82
+            ],
+            "AP_rise_rate": [
+                94.5451,
+                14.3011
+            ],
+            "ISI_CV": [
+                0.1501,
+                0.015
+            ],
+            "Spikecount": [
+                50.0,
+                5.0
+            ],
+            "adaptation_index2": [
+                0.0025,
+                0.0003
+            ],
+            "inv_first_ISI": [
+                32.7869,
+                3.2787
+            ],
+            "mean_frequency": [
+                25.5493,
+                2.5549
+            ],
+            "min_voltage_between_spikes": [
+                -53.0839,
+                1.0825
+            ],
+            "peak_voltage": [
+                22.5951,
+                0.3049
+            ],
+            "spike_half_width": [
+                1.0398,
+                0.0076
+            ],
+            "steady_state_voltage": [
+                -78.0171,
+                7.8017
+            ],
+            "time_to_first_spike": [
+                28.9,
+                2.89
+            ],
+            "voltage_base": [
+                -79.8671,
+                7.9867
+            ]
+        }
+    },
+    "IDthresh_557": {
+        "soma": {
+            "AHP_depth": [
+                27.589,
+                0.9951
+            ],
+            "AHP_depth_abs": [
+                -52.1966,
+                0.9951
+            ],
+            "AHP_depth_abs_slow": [
+                -52.8582,
+                0.6945
+            ],
+            "AHP_slow_time": [
+                0.2727,
+                0.047
+            ],
+            "AHP_time_from_peak": [
+                2.0725,
+                0.1104
+            ],
+            "AP_amplitude": [
+                66.4338,
+                5.2753
+            ],
+            "AP_begin_voltage": [
+                -44.0042,
+                5.1997
+            ],
+            "AP_fall_rate": [
+                -49.7369,
+                1.7204
+            ],
+            "AP_rise_rate": [
+                95.2002,
+                14.4749
+            ],
+            "ISI_CV": [
+                0.2104,
+                0.021
+            ],
+            "Spikecount": [
+                51.0,
+                5.1
+            ],
+            "adaptation_index2": [
+                0.0089,
+                0.0009
+            ],
+            "inv_first_ISI": [
+                35.9712,
+                3.5971
+            ],
+            "mean_frequency": [
+                25.5998,
+                2.56
+            ],
+            "min_voltage_between_spikes": [
+                -52.9551,
+                0.9661
+            ],
+            "peak_voltage": [
+                22.4297,
+                0.313
+            ],
+            "spike_half_width": [
+                1.0432,
+                0.0079
+            ],
+            "steady_state_voltage": [
+                -78.3914,
+                7.8391
+            ],
+            "time_to_first_spike": [
+                24.3,
+                2.43
+            ],
+            "voltage_base": [
+                -79.7856,
+                7.9786
+            ]
+        }
+    },
+    "IV-supra_510": {
+        "soma": {
+            "AHP_depth": [
+                23.9599,
+                0.4478
+            ],
+            "AHP_depth_abs": [
+                -60.6156,
+                0.4478
+            ],
+            "AHP_depth_abs_slow": [
+                -60.5531,
+                0.0657
+            ],
+            "AHP_slow_time": [
+                0.101,
+                0.0057
+            ],
+            "AHP_time_from_peak": [
+                2.025,
+                0.0433
+            ],
+            "AP_amplitude": [
+                85.7328,
+                15.9074
+            ],
+            "AP_begin_voltage": [
+                -56.4937,
+                16.1226
+            ],
+            "AP_fall_rate": [
+                -62.4654,
+                0.2299
+            ],
+            "AP_rise_rate": [
+                114.903,
+                66.1933
+            ],
+            "ISI_CV": [
+                0.1029,
+                0.0103
+            ],
+            "Spikecount": [
+                4.0,
+                0.4
+            ],
+            "adaptation_index2": [
+                -0.0727,
+                0.0073
+            ],
+            "inv_first_ISI": [
+                6.3694,
+                0.6369
+            ],
+            "mean_frequency": [
+                4.5735,
+                0.4574
+            ],
+            "min_voltage_between_spikes": [
+                -60.8313,
+                0.3183
+            ],
+            "peak_voltage": [
+                29.239,
+                0.3779
+            ],
+            "spike_half_width": [
+                0.9006,
+                0.0059
+            ],
+            "steady_state_voltage": [
+                -83.2266,
+                8.3227
+            ],
+            "time_to_first_spike": [
+                412.4,
+                41.24
+            ],
+            "voltage_base": [
+                -84.5755,
+                8.4576
+            ]
+        }
+    },
+    "IV-supra_511": {
+        "soma": {
+            "AHP_depth": [
+                26.7241,
+                0.7198
+            ],
+            "AHP_depth_abs": [
+                -57.7125,
+                0.7198
+            ],
+            "AHP_depth_abs_slow": [
+                -56.2045,
+                0.4066
+            ],
+            "AHP_slow_time": [
+                0.2477,
+                0.0212
+            ],
+            "AHP_time_from_peak": [
+                1.855,
+                0.0805
+            ],
+            "AP_amplitude": [
+                77.2022,
+                8.2377
+            ],
+            "AP_begin_voltage": [
+                -47.9738,
+                8.3093
+            ],
+            "AP_fall_rate": [
+                -62.3792,
+                2.0205
+            ],
+            "AP_rise_rate": [
+                126.8228,
+                30.614
+            ],
+            "ISI_CV": [
+                0.0468,
+                0.0047
+            ],
+            "Spikecount": [
+                20.0,
+                2.0
+            ],
+            "adaptation_index2": [
+                -0.0027,
+                0.0003
+            ],
+            "inv_first_ISI": [
+                19.2678,
+                1.9268
+            ],
+            "mean_frequency": [
+                20.3791,
+                2.0379
+            ],
+            "min_voltage_between_spikes": [
+                -57.7493,
+                0.7199
+            ],
+            "peak_voltage": [
+                29.2284,
+                0.3298
+            ],
+            "spike_half_width": [
+                0.8982,
+                0.0054
+            ],
+            "steady_state_voltage": [
+                -83.0821,
+                8.3082
+            ],
+            "time_to_first_spike": [
+                62.0,
+                6.2
+            ],
+            "voltage_base": [
+                -84.4366,
+                8.4437
+            ]
+        }
+    },
+    "IV_498": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                6.0853,
+                0.6085
+            ],
+            "steady_state_voltage": [
+                -84.4986,
+                8.4499
+            ],
+            "steady_state_voltage_stimend": [
+                -108.5094,
+                10.8509
+            ],
+            "voltage_base": [
+                -83.7334,
+                8.3733
+            ],
+            "voltage_deflection": [
+                -24.9887,
+                2.4989
+            ],
+            "voltage_deflection_begin": [
+                -22.4771,
+                2.2477
+            ],
+            "voltage_deflection_vb_ssse": [
+                -24.7761,
+                2.4776
+            ]
+        }
+    },
+    "IV_499": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                5.5385,
+                0.5538
+            ],
+            "steady_state_voltage": [
+                -84.4315,
+                8.4432
+            ],
+            "steady_state_voltage_stimend": [
+                -106.5787,
+                10.6579
+            ],
+            "voltage_base": [
+                -83.9527,
+                8.3953
+            ],
+            "voltage_deflection": [
+                -22.5963,
+                2.2596
+            ],
+            "voltage_deflection_begin": [
+                -21.2716,
+                2.1272
+            ],
+            "voltage_deflection_vb_ssse": [
+                -22.626,
+                2.2626
+            ]
+        }
+    },
+    "IV_500": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                6.0208,
+                0.6021
+            ],
+            "steady_state_voltage": [
+                -84.4535,
+                8.4453
+            ],
+            "steady_state_voltage_stimend": [
+                -103.2501,
+                10.325
+            ],
+            "voltage_base": [
+                -83.9589,
+                8.3959
+            ],
+            "voltage_deflection": [
+                -19.3427,
+                1.9343
+            ],
+            "voltage_deflection_begin": [
+                -18.6633,
+                1.8663
+            ],
+            "voltage_deflection_vb_ssse": [
+                -19.2912,
+                1.9291
+            ]
+        }
+    },
+    "IV_501": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                6.4632,
+                0.6463
+            ],
+            "steady_state_voltage": [
+                -84.511,
+                8.4511
+            ],
+            "steady_state_voltage_stimend": [
+                -99.6537,
+                9.9654
+            ],
+            "voltage_base": [
+                -83.9241,
+                8.3924
+            ],
+            "voltage_deflection": [
+                -15.6643,
+                1.5664
+            ],
+            "voltage_deflection_begin": [
+                -15.143,
+                1.5143
+            ],
+            "voltage_deflection_vb_ssse": [
+                -15.7296,
+                1.573
+            ]
+        }
+    },
+    "IV_502": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                6.0273,
+                0.6027
+            ],
+            "steady_state_voltage": [
+                -84.5701,
+                8.457
+            ],
+            "steady_state_voltage_stimend": [
+                -96.0887,
+                9.6089
+            ],
+            "voltage_base": [
+                -84.1353,
+                8.4135
+            ],
+            "voltage_deflection": [
+                -11.9534,
+                1.1953
+            ],
+            "voltage_deflection_begin": [
+                -11.5924,
+                1.1592
+            ],
+            "voltage_deflection_vb_ssse": [
+                -11.9534,
+                1.1953
+            ]
+        }
+    },
+    "IV_503": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                6.0269,
+                0.6027
+            ],
+            "steady_state_voltage": [
+                -84.5655,
+                8.4565
+            ],
+            "steady_state_voltage_stimend": [
+                -92.473,
+                9.2473
+            ],
+            "voltage_base": [
+                -84.3328,
+                8.4333
+            ],
+            "voltage_deflection": [
+                -8.0671,
+                0.8067
+            ],
+            "voltage_deflection_begin": [
+                -7.8631,
+                0.7863
+            ],
+            "voltage_deflection_vb_ssse": [
+                -8.1402,
+                0.814
+            ]
+        }
+    },
+    "IV_504": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                7.166,
+                0.7166
+            ],
+            "steady_state_voltage": [
+                -84.6688,
+                8.4669
+            ],
+            "steady_state_voltage_stimend": [
+                -88.6759,
+                8.8676
+            ],
+            "voltage_base": [
+                -84.5435,
+                8.4543
+            ],
+            "voltage_deflection": [
+                -4.0583,
+                0.4058
+            ],
+            "voltage_deflection_begin": [
+                -4.0113,
+                0.4011
+            ],
+            "voltage_deflection_vb_ssse": [
+                -4.1324,
+                0.4132
+            ]
+        }
+    },
+    "IV_505": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                138.1363,
+                13.8136
+            ],
+            "steady_state_voltage": [
+                -84.5607,
+                8.4561
+            ],
+            "steady_state_voltage_stimend": [
+                -84.5811,
+                8.4581
+            ],
+            "voltage_base": [
+                -84.5475,
+                8.4547
+            ],
+            "voltage_deflection": [
+                -0.0691,
+                0.0069
+            ],
+            "voltage_deflection_begin": [
+                -0.0984,
+                0.0098
+            ],
+            "voltage_deflection_vb_ssse": [
+                -0.0336,
+                0.0034
+            ]
+        }
+    },
+    "IV_506": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                5.646,
+                0.5646
+            ],
+            "steady_state_voltage": [
+                -84.3763,
+                8.4376
+            ],
+            "steady_state_voltage_stimend": [
+                -80.1575,
+                8.0158
+            ],
+            "voltage_base": [
+                -84.5413,
+                8.4541
+            ],
+            "voltage_deflection": [
+                4.3205,
+                0.4321
+            ],
+            "voltage_deflection_begin": [
+                4.2592,
+                0.4259
+            ],
+            "voltage_deflection_vb_ssse": [
+                4.3838,
+                0.4384
+            ]
+        }
+    },
+    "IV_507": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                7.0148,
+                0.7015
+            ],
+            "steady_state_voltage": [
+                -84.3038,
+                8.4304
+            ],
+            "steady_state_voltage_stimend": [
+                -75.3948,
+                7.5395
+            ],
+            "voltage_base": [
+                -84.5101,
+                8.451
+            ],
+            "voltage_deflection": [
+                9.092,
+                0.9092
+            ],
+            "voltage_deflection_begin": [
+                9.0108,
+                0.9011
+            ],
+            "voltage_deflection_vb_ssse": [
+                9.1152,
+                0.9115
+            ]
+        }
+    },
+    "IV_508": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                8.2536,
+                0.8254
+            ],
+            "steady_state_voltage": [
+                -84.0933,
+                8.4093
+            ],
+            "steady_state_voltage_stimend": [
+                -70.0247,
+                7.0025
+            ],
+            "voltage_base": [
+                -84.5548,
+                8.4555
+            ],
+            "voltage_deflection": [
+                14.6974,
+                1.4697
+            ],
+            "voltage_deflection_begin": [
+                14.3086,
+                1.4309
+            ],
+            "voltage_deflection_vb_ssse": [
+                14.5301,
+                1.453
+            ]
+        }
+    },
+    "IV_509": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.1
+            ],
+            "decay_time_constant_after_stim": [
+                9.1193,
+                0.9119
+            ],
+            "steady_state_voltage": [
+                -83.7446,
+                8.3745
+            ],
+            "steady_state_voltage_stimend": [
+                -63.4081,
+                6.3408
+            ],
+            "voltage_base": [
+                -84.5471,
+                8.4547
+            ],
+            "voltage_deflection": [
+                21.2025,
+                2.1202
+            ],
+            "voltage_deflection_begin": [
+                20.3601,
+                2.036
+            ],
+            "voltage_deflection_vb_ssse": [
+                21.139,
+                2.1139
+            ]
+        }
+    },
+    "sAHP_521": {
+        "soma": {
+            "Spikecount": [
+                8.0,
+                0.8
+            ],
+            "mean_frequency": [
+                44.1014,
+                4.4101
+            ],
+            "minimum_voltage": [
+                -65.4625,
+                6.5462
+            ],
+            "voltage_base": [
+                -63.8603,
+                6.386
+            ]
+        }
+    },
+    "sAHP_522": {
+        "soma": {
+            "Spikecount": [
+                13.0,
+                1.3
+            ],
+            "mean_frequency": [
+                69.8549,
+                6.9855
+            ],
+            "minimum_voltage": [
+                -66.0938,
+                6.6094
+            ],
+            "voltage_base": [
+                -63.7564,
+                6.3756
+            ]
+        }
+    },
+    "sAHP_523": {
+        "soma": {
+            "Spikecount": [
+                16.0,
+                1.6
+            ],
+            "mean_frequency": [
+                85.4701,
+                8.547
+            ],
+            "minimum_voltage": [
+                -67.1188,
+                6.7119
+            ],
+            "voltage_base": [
+                -63.9676,
+                6.3968
+            ]
+        }
+    },
+    "sAHP_524": {
+        "soma": {
+            "Spikecount": [
+                18.0,
+                1.8
+            ],
+            "mean_frequency": [
+                92.5926,
+                9.2593
+            ],
+            "minimum_voltage": [
+                -67.8187,
+                6.7819
+            ],
+            "voltage_base": [
+                -63.9619,
+                6.3962
+            ]
+        }
+    },
+    "sAHP_525": {
+        "soma": {
+            "Spikecount": [
+                19.0,
+                1.9
+            ],
+            "mean_frequency": [
+                99.0099,
+                9.901
+            ],
+            "minimum_voltage": [
+                -67.8937,
+                6.7894
+            ],
+            "voltage_base": [
+                -63.9656,
+                6.3966
+            ]
+        }
+    },
+    "sAHP_526": {
+        "soma": {
+            "Spikecount": [
+                20.0,
+                2.0
+            ],
+            "mean_frequency": [
+                102.6694,
+                10.2669
+            ],
+            "minimum_voltage": [
+                -67.95,
+                6.795
+            ],
+            "voltage_base": [
+                -63.923,
+                6.3923
+            ]
+        }
+    }
+}

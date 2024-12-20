@@ -1,0 +1,338 @@
+{
+    "IV_356": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.001
+            ],
+            "decay_time_constant_after_stim": [
+                4.9643,
+                0.770216419802469
+            ],
+            "voltage_base": [
+                -87.7139,
+                0.16439071006463554
+            ],
+            "voltage_deflection": [
+                -9.3212,
+                0.9321
+            ],
+            "voltage_deflection_begin": [
+                -9.4688,
+                0.9469
+            ],
+            "voltage_deflection_vb_ssse": [
+                -9.3848,
+                0.9385
+            ]
+        }
+    },
+    "IV_364": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.001
+            ],
+            "decay_time_constant_after_stim": [
+                10.1433,
+                2.0454671837993397
+            ],
+            "voltage_base": [
+                -87.9733,
+                0.16439071006463554
+            ],
+            "voltage_deflection": [
+                13.0245,
+                1.3024
+            ],
+            "voltage_deflection_begin": [
+                12.8312,
+                1.2831
+            ],
+            "voltage_deflection_vb_ssse": [
+                13.0334,
+                1.3033
+            ]
+        }
+    },
+    "IDthresh-sub_398": {
+        "soma": {
+            "Spikecount": [
+                0.0,
+                0.001
+            ],
+            "decay_time_constant_after_stim": [
+                15.0273,
+                2.0454671837993397
+            ],
+            "voltage_base": [
+                -87.8842,
+                0.16439071006463554
+            ],
+            "voltage_deflection": [
+                29.2554,
+                2.9255
+            ],
+            "voltage_deflection_begin": [
+                28.1943,
+                2.8194
+            ],
+            "voltage_deflection_vb_ssse": [
+                29.7387,
+                2.9739
+            ]
+        }
+    },
+    "IDthresh_400": {
+        "soma": {
+            "AHP_depth": [
+                28.1642,
+                1.0871
+            ],
+            "AHP_depth_abs": [
+                -59.8765,
+                1.0871
+            ],
+            "AHP_depth_abs_slow": [
+                -61.8531,
+                0.4262
+            ],
+            "AHP_slow_time": [
+                0.0903,
+                0.0128
+            ],
+            "AHP_time_from_peak": [
+                1.7625,
+                0.1111
+            ],
+            "AP_amplitude": [
+                70.0492,
+                2.0241
+            ],
+            "AP_begin_voltage": [
+                -46.3477,
+                0.7585
+            ],
+            "AP_fall_rate": [
+                -64.1126,
+                2.0166
+            ],
+            "AP_rise_rate": [
+                119.7414,
+                9.5807
+            ],
+            "ISI_CV": [
+                0.1804,
+                0.018
+            ],
+            "Spikecount": [
+                8.0,
+                0.8
+            ],
+            "adaptation_index2": [
+                0.038,
+                0.0038
+            ],
+            "inv_first_ISI": [
+                5.4496,
+                0.545
+            ],
+            "mean_frequency": [
+                4.4192,
+                0.4419
+            ],
+            "min_voltage_between_spikes": [
+                -62.0375,
+                0.5997
+            ],
+            "peak_voltage": [
+                23.7016,
+                1.3021
+            ],
+            "spike_half_width": [
+                0.8359,
+                0.0072
+            ],
+            "steady_state_voltage": [
+                -86.316,
+                8.6316
+            ],
+            "time_to_first_spike": [
+                245.0,
+                24.5
+            ],
+            "voltage_base": [
+                -88.0408,
+                0.16439071006463554
+            ]
+        }
+    },
+    "IDthresh_402": {
+        "soma": {
+            "AHP_depth": [
+                28.4161,
+                1.1218
+            ],
+            "AHP_depth_abs": [
+                -59.6948,
+                1.1218
+            ],
+            "AHP_depth_abs_slow": [
+                -60.9681,
+                0.5389
+            ],
+            "AHP_slow_time": [
+                0.1168,
+                0.0176
+            ],
+            "AHP_time_from_peak": [
+                1.7917,
+                0.0759
+            ],
+            "AP_amplitude": [
+                68.7198,
+                2.402
+            ],
+            "AP_begin_voltage": [
+                -46.3026,
+                0.7985
+            ],
+            "AP_fall_rate": [
+                -63.4823,
+                3.0141
+            ],
+            "AP_rise_rate": [
+                113.2273,
+                6.8891
+            ],
+            "ISI_CV": [
+                0.1507,
+                0.0151
+            ],
+            "Spikecount": [
+                12.0,
+                1.2
+            ],
+            "adaptation_index2": [
+                0.0171,
+                0.0017
+            ],
+            "inv_first_ISI": [
+                6.7843,
+                0.6784
+            ],
+            "mean_frequency": [
+                6.0241,
+                0.6024
+            ],
+            "min_voltage_between_spikes": [
+                -61.1318,
+                0.7293
+            ],
+            "peak_voltage": [
+                22.4172,
+                1.7289
+            ],
+            "spike_half_width": [
+                0.8383,
+                0.0052
+            ],
+            "steady_state_voltage": [
+                -86.7121,
+                8.6712
+            ],
+            "time_to_first_spike": [
+                204.7,
+                20.47
+            ],
+            "voltage_base": [
+                -88.1109,
+                0.16439071006463554
+            ]
+        }
+    },
+    "IDthresh_410": {
+        "soma": {
+            "AHP_depth": [
+                30.4473,
+                1.3498
+            ],
+            "AHP_depth_abs": [
+                -58.0344,
+                1.3498
+            ],
+            "AHP_depth_abs_slow": [
+                -58.8184,
+                0.7006
+            ],
+            "AHP_slow_time": [
+                0.1751,
+                0.019
+            ],
+            "AHP_time_from_peak": [
+                1.78,
+                0.1122
+            ],
+            "AP_amplitude": [
+                64.7909,
+                2.6871
+            ],
+            "AP_begin_voltage": [
+                -45.6775,
+                0.8389
+            ],
+            "AP_fall_rate": [
+                -59.4851,
+                2.0521
+            ],
+            "AP_rise_rate": [
+                105.788,
+                14.1569
+            ],
+            "ISI_CV": [
+                0.1344,
+                0.0134
+            ],
+            "Spikecount": [
+                20.0,
+                2.0
+            ],
+            "adaptation_index2": [
+                0.0047,
+                0.0005
+            ],
+            "inv_first_ISI": [
+                12.1212,
+                1.2121
+            ],
+            "mean_frequency": [
+                10.3311,
+                1.0331
+            ],
+            "min_voltage_between_spikes": [
+                -58.996,
+                1.0108
+            ],
+            "peak_voltage": [
+                19.1134,
+                1.9511
+            ],
+            "spike_half_width": [
+                0.8562,
+                0.0061
+            ],
+            "steady_state_voltage": [
+                -86.9328,
+                8.6933
+            ],
+            "time_to_first_spike": [
+                119.5,
+                11.95
+            ],
+            "voltage_base": [
+                -88.4817,
+                0.16439071006463554
+            ]
+        }
+    }
+}

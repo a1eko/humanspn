@@ -1,0 +1,30 @@
+Remote workflow at PDC
+
+Set up SSH key pairs following these instructions:
+
+    https://www.pdc.kth.se/support/documents/login/ssh_login.html
+
+Login to PDC machines (example for user 'akozlov' on 'dardel'):
+
+    ssh -i ~/.ssh/id-ed25519-pdc akozlov@dardel.pdc.kth.se
+
+Once on the login node, start the Bash script:
+
+    bash
+
+Set up the virtual environment BluePyOpt optimisations:
+
+    module load cray-python
+    module swap PrgEnv-cray PrgEnv-gnu
+    source $SCRATCH/local/venv/bpopt/bin/activate
+
+Use rsync for file transfer from/to PDC:
+
+    # rsync -auvz -e "ssh -i ~/.ssh/cscs-key" bp000145@ela.cscs.ch:/scratch/snx3000/bp000145/<path1> ~/<path2>
+    # rsync -auvz -e "ssh -i ~/.ssh/cscs-key" bp000145@ela.cscs.ch:/users/bp000145/<path1> ~/<path2>
+    # rsync -auvz -e "ssh -i ~/.ssh/cscs-key" ~/<path2> bp000145@ela.cscs.ch:/users/bp000145/<path1> 
+
+    rsync -auvz -e "ssh -i ~/.ssh/id-ed25519-pdc" akozlov@dardel.pdc.kth.se:/cfs/klemming/home/a/akozlov/<path1> ~/<path2> 
+    rsync -auvz -e "ssh -i ~/.ssh/id-ed25519-pdc" ~/<path2> akozlov@dardel.pdc.kth.se:/cfs/klemming/home/a/akozlov/<path1>
+
+January 2024
