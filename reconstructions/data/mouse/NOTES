@@ -10,9 +10,6 @@ Reconstructions of mouse striatal projection neurons
 
 * derived/ - processed data.
 
-  Data related to 6 month old mice is in age6m/ subdirectories throughout the
-  directory structure.
-
 * derived/converted/ - reconstructions converted to SWC+ using the HBP Neuron
   Morphology Viewer (https://neuroinformatics.nl/HBP/morphology-viewer-dev).
 

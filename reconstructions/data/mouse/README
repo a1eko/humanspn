@@ -9,6 +9,3 @@ Reconstructions of mouse striatal projection neurons
   reconstructions animal_* and mouse_* come from 2-3 month old mice.
 
 * derived/ - processed data.
-
-  Data related to 6 month old mice is in age6m/ subdirectories throughout the
-  directory structure.
